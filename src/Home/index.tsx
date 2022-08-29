@@ -11,14 +11,12 @@ export function Home() {
 
 
     return (
-        <div>
+        <Fragment>
             <Navigation />
             <Apresentation />
             <Skills />
             <Projects />
-
-            <div>cursos</div>
-
-        </div>
+            <Experiences />
+        </Fragment>
     )
 }

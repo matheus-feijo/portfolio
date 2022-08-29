@@ -41,7 +41,7 @@ export function Projects() {
                 {cards.map((card, ind) => {
                     return (
                         <button key={ind} className="h-64 w-64 rounded-md outline outline-1 outline-slate-700">
-
+                            <span>Em breve</span>
 
                         </button>
                     )

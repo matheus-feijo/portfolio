@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const skills = {
     javascript: 'Meu primeiro contato verdadeiro com javaScript foi quando ingressei no estagio no qual tive que aprender mais profundamente para poder utilizar os frameworks NodeJs e ReactJs. Se tornando minha linguagem favorita na qual busco aprender mais e mais todos os dias.',
@@ -22,6 +22,7 @@ export function Skills() {
 
     const styleDefault = 'h-16 w-16';
     const [description, setDescription] = useState({ name: '', describe: '' });
+    const [isButtonHeldownm, setIsButtonHelDown] = useState(false);
 
     const showDescription = (title: string) => {
         const namesOfSkills = Object.getOwnPropertyNames(skills);
@@ -39,12 +40,12 @@ export function Skills() {
             <div className="flex">
                 <div className="flex flex-wrap gap-10 pl-20 w-1/2 max-h-64">
                     {/**JAVA SCRIPT */}
-                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'javascript' ? 'bg-slate-200' : 'none'}`}
+                    <button className={`p-5 outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'javascript' ? 'bg-slate-200' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('javascript');
                         }}
                         onMouseLeave={() => {
-                            showDescription('default');
+
                         }}
                     >
                         <svg viewBox="0 0 128 128" className={styleDefault}>

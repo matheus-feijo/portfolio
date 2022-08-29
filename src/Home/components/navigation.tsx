@@ -20,13 +20,19 @@ export function Navigation() {
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({ behavior: 'smooth', top: 1400 })
+                    }}>
                         Experiencias
                     </button>
                 </li>
                 <li>
-                    <button>
-                        Cursos
+                    <button onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({ behavior: "smooth", top: 1100 })
+                    }}>
+                        Projetos
                     </button>
                 </li>
 
