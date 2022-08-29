@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 
 export function Apresentation() {
 
@@ -8,7 +6,6 @@ export function Apresentation() {
             <div>
                 <p className="text-6xl font-bold leading-relaxed ">Eu sou o Matheus Feijó</p>
                 <p className="text-4xl">Desenvolvedor frontEnd</p>
-
             </div>
             <div className="flex gap-8">
                 <button className="h-20 w-20">

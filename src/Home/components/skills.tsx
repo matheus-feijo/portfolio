@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
 
 const skills = {
     javascript: 'Meu primeiro contato verdadeiro com javaScript foi quando ingressei no estagio no qual tive que aprender mais profundamente para poder utilizar os frameworks NodeJs e ReactJs. Se tornando minha linguagem favorita na qual busco aprender mais e mais todos os dias.',
@@ -19,33 +18,28 @@ const skills = {
 }
 
 
-
-
 export function Skills() {
 
-
     const styleDefault = 'h-16 w-16';
-    const cardIconStyle = "p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75";
-    const [description, setDescription] = useState('dddd');
-    const [isShowDesc, setIsShowDesc] = useState(false);
+    const [description, setDescription] = useState({ name: '', describe: '' });
 
     const showDescription = (title: string) => {
         const namesOfSkills = Object.getOwnPropertyNames(skills);
         const descOfSkills = Object.values(skills);
         const position = namesOfSkills.indexOf(title);
-        setDescription(descOfSkills[position]);
+        setDescription({ name: namesOfSkills[position], describe: descOfSkills[position] });
     }
 
 
     return (
 
-        <div className="pb-32">
+        <div>
             <p className="text-3xl font-bold pl-20 pb-5">Habilidades</p>
 
             <div className="flex">
-                <div className="flex flex-wrap gap-10 pl-20 w-1/2">
+                <div className="flex flex-wrap gap-10 pl-20 w-1/2 max-h-64">
                     {/**JAVA SCRIPT */}
-                    <button className="p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75"
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'javascript' ? 'bg-slate-200' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('javascript');
                         }}
@@ -59,12 +53,12 @@ export function Skills() {
                     </button>
 
                     {/**REACT */}
-                    <button className={cardIconStyle}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'react' ? 'bg-slate-200' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('react');
                         }}
                         onMouseLeave={() => {
-                            showDescription('default');
+                            //showDescription('default');
                         }}
                     >
                         <svg viewBox="0 0 128 128" className={styleDefault}>
@@ -73,25 +67,25 @@ export function Skills() {
                     </button>
 
                     {/**NODE JS */}
-                    <button className={cardIconStyle}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'nodejs' ? 'bg-slate-200' : 'none'}`}
 
                         onMouseMove={() => {
                             showDescription('nodejs');
                         }}
                         onMouseLeave={() => {
-                            showDescription('default');
+                            //showDescription('default');
                         }}
                     >
                         <svg viewBox="0 0 128 128" className={styleDefault}>
                             <path fill="#83CD29" d="M112.678 30.334L68.535 4.729c-2.781-1.584-6.424-1.584-9.227 0L14.82 30.334C11.951 31.985 10 35.088 10 38.407v51.142c0 3.319 1.992 6.423 4.862 8.083l11.729 6.688c5.627 2.772 7.186 2.772 9.746 2.772 8.334 0 12.662-5.039 12.662-13.828v-50.49C49 42.061 49.445 41 48.744 41h-5.622C42.41 41 41 42.061 41 42.773v50.49c0 3.896-3.616 7.773-10.202 4.48L18.676 90.73c-.422-.23-.676-.693-.676-1.181V38.407c0-.482.463-.966.891-1.213l44.378-25.561a1.508 1.508 0 011.415 0l43.963 25.555c.421.253.354.722.354 1.219v51.142c0 .488.092.963-.323 1.198l-44.133 25.576c-.378.227-.87.227-1.285 0l-11.317-6.749c-.341-.198-.752-.269-1.08-.086-3.145 1.783-3.729 2.02-6.679 3.043-.727.253-1.799.692.408 1.929l14.798 8.754a9.29 9.29 0 004.647 1.246 9.303 9.303 0 004.666-1.246l43.976-25.582c2.871-1.672 4.322-4.764 4.322-8.083V38.407c-.001-3.319-1.452-6.414-4.323-8.073zM77.727 81.445c-11.727 0-14.309-3.235-15.17-9.066-.102-.628-.634-1.379-1.274-1.379h-5.73c-.709 0-1.28.86-1.28 1.566 0 7.466 4.06 16.512 23.454 16.512 14.038 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.104 0 12.46 1.954 13.841 8.091.119.577.646.991 1.241.991h5.754c.354 0 .691-.143.939-.396.241-.272.367-.613.336-.979-.893-10.569-7.913-15.494-22.112-15.494-12.632 0-20.166 5.334-20.166 14.275 0 9.698 7.497 12.378 19.622 13.577 14.505 1.422 15.633 3.542 15.633 6.395 0 4.956-3.978 7.067-13.308 7.067z"></path>
                         </svg>
                     </button>
-                    <button className={cardIconStyle}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'css' ? 'bg-slate-200' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('css');
                         }}
                         onMouseLeave={() => {
-                            showDescription('default');
+                            //showDescription('default');
                         }}
                     >
                         {/**CSS */}
@@ -100,12 +94,12 @@ export function Skills() {
                         </svg>
                     </button>
 
-                    <button className={cardIconStyle}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'html' ? 'bg-slate-200' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('html');
                         }}
                         onMouseLeave={() => {
-                            showDescription('default');
+                            //showDescription('default');
                         }}
                     >
                         {/**HTML */}
@@ -114,12 +108,12 @@ export function Skills() {
                         </svg>
                     </button>
 
-                    <button className={cardIconStyle}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'python' ? 'bg-slate-200' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('python');
                         }}
                         onMouseLeave={() => {
-                            showDescription('default');
+                            //showDescription('default');
                         }}
                     >
                         <svg viewBox="0 0 128 128" className={styleDefault}>
@@ -128,12 +122,12 @@ export function Skills() {
 
                     </button>
 
-                    <button className={cardIconStyle}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'mysql' ? 'bg-slate-200' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('mysql');
                         }}
                         onMouseLeave={() => {
-                            showDescription('default');
+                            //showDescription('default');
                         }}
                     >
 
@@ -142,12 +136,12 @@ export function Skills() {
                         </svg>
                     </button>
 
-                    <button className={cardIconStyle}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-200 transition-colors duration-75 ${description.name === 'nextjs' ? 'bg-slate-200' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('nextjs');
                         }}
                         onMouseLeave={() => {
-                            showDescription('default');
+                            //showDescription('default');
                         }}
                     >
 
@@ -157,7 +151,8 @@ export function Skills() {
                     </button>
                 </div>
                 <div className="w-1/2 min-h-[35vh]">
-                    <p className="text-justify pr-20">{description}</p>
+                    <h3 className="font-bold text-center text-2xl">{description.name}</h3>
+                    <p className="text-justify pr-20">{description.describe}</p>
 
                 </div>
             </div>
