@@ -1,0 +1,25 @@
+li{
+    padding: 20px;
+    border-bottom: none;
+    font-size: 26px;
+}
+
+li :focus{
+    animation: change-focus-nav 5s 0ms;
+    
+}
+
+
+@keyframes change-focus-nav{
+    from{
+        border-bottom: none;
+        border-bottom-color: transparent;
+    }
+
+    to{
+        border-bottom: 2px solid rgba(0,0,0,0.6);
+    }
+
+}
+
+

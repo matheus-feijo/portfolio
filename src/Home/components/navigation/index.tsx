@@ -1,13 +1,16 @@
+import "./style.css";
+
 export function Navigation() {
 
     return (
         <div>
             <ul className="justify-around flex items-center h-[8vh]">
                 <li>
-                    <button onClick={(e) => {
-                        e.preventDefault();
-                        window.scrollTo({ behavior: "smooth", top: 1100 })
-                    }}>
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.scrollTo({ behavior: "smooth", top: 1100 })
+                        }}>
                         Sobre
                     </button>
                 </li>

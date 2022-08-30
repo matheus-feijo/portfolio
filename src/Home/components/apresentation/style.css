@@ -1,0 +1,42 @@
+
+
+.typing-animation{
+    animation: typing 4s 1s normal both,blinkCursor 1s infinite normal;
+}
+
+.subtitle-apresentation{
+    animation: subtitle-view 4s 5s normal both;
+}
+
+
+@keyframes subtitle-view {
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 22rem;
+    }
+}
+
+
+@keyframes typing{
+    from{
+        width: 0;
+        border-right:none;
+    }
+
+    to{
+        width: 37rem;
+        border-right: 2px solid rgba(0,0,0,0.7);
+    }
+}
+
+@keyframes  blinkCursor{
+    from{
+        border-right-color:rgba(0,0,0,0.7);
+    }
+    to{
+        border-right-color:transparent; 
+    }
+}
