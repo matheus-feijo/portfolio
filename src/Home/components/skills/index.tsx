@@ -1,38 +1,66 @@
 import { useEffect, useState } from "react";
 import "./style.css";
 
-const skills = {
-    javascript: 'Meu primeiro contato verdadeiro com javaScript foi quando ingressei no estagio no qual tive que aprender mais profundamente para poder utilizar os frameworks NodeJs e ReactJs. Se tornando minha linguagem favorita na qual busco aprender mais e mais todos os dias.',
-
-    react: 'Meu framework favorito para mexer com frontend, meu foco principal de estudos desde que comecei a utiliza-lo e tenho muita vontade de continuar trabalhando com ela e aprender mais ainda.',
-
-    nodejs: 'Aprendi quando ingressei no meu primeiro estagio e com o passar do tempo fui gostando desse framework por tornar mais facil o entendimento do backend de uma aplicação.',
-
-    python: 'Minha primeira linguagem em que aprendi a programar, tenho um enorme carinho por ela e se tornou minha linguagem de segurança na qual sempre que preciso solucionar algum problema rapidamente recorro a ela. Além disso, em meus prijetos de pesquisa utilizava-a para tratamento de dados com as bibliotecas pandas e numpy;',
-
-    html: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
-
-    css: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
-
-    mysql: 'Meu primeiro banco de dados relacional que aprendi, utilizo regularmente quando preciso criar aplicações com estrutura simples de ligação entre tabelas',
-
-    nextjs: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
-
-    default: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum'
+const habilidades = {
+    react: {
+        name: 'ReactJS',
+        exp: '1 ano(s)',
+        describe: 'Atualmente meu framework favorito para criar aplicações web no frontend'
+    },
+    nodejs: {
+        name: 'NodeJS',
+        exp: '1 ano(s)',
+        describe: 'Normalmente recorro a essa ferramenta quando preciso criar um backend de alguma aplicação, utilizando juntamente com o express'
+    },
+    python: {
+        name: 'Python',
+        exp: '2 ano(s)',
+        describe: 'Minha primeira linguagem de programação a aprender na faculdade. Posteriormente busquei aperfeiçoar os conhecimentos nessa linguagem por causa dos projetos de pesquisa da universidade'
+    },
+    css: {
+        name: 'CSS',
+        exp: '1 ano(s)',
+        describe: 'Gosto muito da ampla possibilidade de estilizações que se pode fazer com essa ferramenta'
+    },
+    html: {
+        name: 'HTML',
+        exp: '1 ano(s)',
+        describe: 'Meu primeiro passo para entrar no mundo do desenvolvimento web'
+    },
+    mysql: {
+        name: 'MySQL',
+        exp: '2 ano(s)',
+        describe: 'Meu primeiro gerenciador de banco de dados relacional, uso muito quando crio alguma aplicação completa',
+    },
+    nextjs: {
+        name: 'NextJS',
+        exp: '0 ano(s)',
+        describe: 'Por ser apaixonado por React, busco sempre aprender sobre essa ferramenta visto que é um framework melhorado',
+    },
+    javascript: {
+        name: 'JavaScript',
+        exp: '1 ano(s)',
+        describe: 'Minha linguagem de programação favorita, busco utiliza-la sempre que possivel'
+    }
 }
 
+type DataSkillProps = {
+    name: string,
+    exp: string,
+    describe: string,
+}
 
 export function Skills() {
 
     const styleDefault = 'h-16 w-16';
-    const [description, setDescription] = useState({ name: '', describe: '' });
-    const [isButtonHeldownm, setIsButtonHelDown] = useState(false);
+    const [dataSkill, setDataSkill] = useState<DataSkillProps>();
 
     const showDescription = (title: string) => {
-        const namesOfSkills = Object.getOwnPropertyNames(skills);
-        const descOfSkills = Object.values(skills);
-        const position = namesOfSkills.indexOf(title);
-        setDescription({ name: namesOfSkills[position], describe: descOfSkills[position] });
+        const arraySkill = Object.entries(habilidades);
+        const names = Object.getOwnPropertyNames(habilidades);
+        const pos = names.indexOf(title);
+
+        setDataSkill(arraySkill[pos][1]);
     }
 
 
@@ -45,7 +73,7 @@ export function Skills() {
             <div className="flex gap-5">
                 <div className="flex flex-wrap gap-10 pl-20 w-1/2 h-auto">
                     {/**JAVA SCRIPT */}
-                    <button className={`p-5 outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'javascript' ? 'bg-slate-400' : 'none'}`}
+                    <button className={`p-5 outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'JavaScript' ? 'bg-slate-400' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('javascript');
                         }}
@@ -59,7 +87,7 @@ export function Skills() {
                     </button>
 
                     {/**REACT */}
-                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'react' ? 'bg-slate-400' : 'none'}`}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'ReactJS' ? 'bg-slate-400' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('react');
                         }}
@@ -73,7 +101,7 @@ export function Skills() {
                     </button>
 
                     {/**NODE JS */}
-                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'nodejs' ? 'bg-slate-400' : 'none'}`}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'NodeJS' ? 'bg-slate-400' : 'none'}`}
 
                         onMouseMove={() => {
                             showDescription('nodejs');
@@ -86,7 +114,7 @@ export function Skills() {
                             <path fill="#83CD29" d="M112.678 30.334L68.535 4.729c-2.781-1.584-6.424-1.584-9.227 0L14.82 30.334C11.951 31.985 10 35.088 10 38.407v51.142c0 3.319 1.992 6.423 4.862 8.083l11.729 6.688c5.627 2.772 7.186 2.772 9.746 2.772 8.334 0 12.662-5.039 12.662-13.828v-50.49C49 42.061 49.445 41 48.744 41h-5.622C42.41 41 41 42.061 41 42.773v50.49c0 3.896-3.616 7.773-10.202 4.48L18.676 90.73c-.422-.23-.676-.693-.676-1.181V38.407c0-.482.463-.966.891-1.213l44.378-25.561a1.508 1.508 0 011.415 0l43.963 25.555c.421.253.354.722.354 1.219v51.142c0 .488.092.963-.323 1.198l-44.133 25.576c-.378.227-.87.227-1.285 0l-11.317-6.749c-.341-.198-.752-.269-1.08-.086-3.145 1.783-3.729 2.02-6.679 3.043-.727.253-1.799.692.408 1.929l14.798 8.754a9.29 9.29 0 004.647 1.246 9.303 9.303 0 004.666-1.246l43.976-25.582c2.871-1.672 4.322-4.764 4.322-8.083V38.407c-.001-3.319-1.452-6.414-4.323-8.073zM77.727 81.445c-11.727 0-14.309-3.235-15.17-9.066-.102-.628-.634-1.379-1.274-1.379h-5.73c-.709 0-1.28.86-1.28 1.566 0 7.466 4.06 16.512 23.454 16.512 14.038 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.104 0 12.46 1.954 13.841 8.091.119.577.646.991 1.241.991h5.754c.354 0 .691-.143.939-.396.241-.272.367-.613.336-.979-.893-10.569-7.913-15.494-22.112-15.494-12.632 0-20.166 5.334-20.166 14.275 0 9.698 7.497 12.378 19.622 13.577 14.505 1.422 15.633 3.542 15.633 6.395 0 4.956-3.978 7.067-13.308 7.067z"></path>
                         </svg>
                     </button>
-                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'css' ? 'bg-slate-400' : 'none'}`}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'CSS' ? 'bg-slate-400' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('css');
                         }}
@@ -100,7 +128,7 @@ export function Skills() {
                         </svg>
                     </button>
 
-                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'html' ? 'bg-slate-400' : 'none'}`}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'HTML' ? 'bg-slate-400' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('html');
                         }}
@@ -114,7 +142,7 @@ export function Skills() {
                         </svg>
                     </button>
 
-                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'python' ? 'bg-slate-400' : 'none'}`}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'Python' ? 'bg-slate-400' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('python');
                         }}
@@ -128,7 +156,7 @@ export function Skills() {
 
                     </button>
 
-                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'mysql' ? 'bg-slate-400' : 'none'}`}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'MySQL' ? 'bg-slate-400' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('mysql');
                         }}
@@ -142,7 +170,7 @@ export function Skills() {
                         </svg>
                     </button>
 
-                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'nextjs' ? 'bg-slate-400' : 'none'}`}
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'NextJS' ? 'bg-slate-400' : 'none'}`}
                         onMouseMove={() => {
                             showDescription('nextjs');
                         }}
@@ -157,9 +185,9 @@ export function Skills() {
                     </button>
                 </div>
                 <div className="w-1/2 min-h-[35vh]">
-                    <h3 className="font-bold text-center text-2xl">{description.name}</h3>
-                    <p className="description-language text-justify pr-20">{description.describe}</p>
-
+                    <h3 className="font-bold text-center text-2xl">{dataSkill?.name}</h3>
+                    <p className="mt-12 mb-6">{dataSkill?.exp}</p>
+                    <p className="description-language text-justify pr-20">{dataSkill?.describe}</p>
                 </div>
             </div>
 
