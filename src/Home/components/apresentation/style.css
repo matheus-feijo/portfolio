@@ -2,10 +2,19 @@
     grid-template-rows: 50vh 2vh 40vh;
 }
 
+.more-details{
+    animation: more-details-view 6s 5s normal both;
+}
 
 
-.typing-animation{
-    animation: typing 4s 1s normal both,blinkCursor 1s infinite normal;
+@keyframes more-details-view {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
 }
 
 .subtitle-apresentation{
@@ -23,6 +32,9 @@
     }
 }
 
+.typing-animation{
+    animation: typing 4s 1s normal both,blinkCursor 1s infinite normal;
+}
 
 @keyframes typing{
     from{

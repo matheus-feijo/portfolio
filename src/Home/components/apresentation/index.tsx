@@ -13,10 +13,12 @@ export function Apresentation() {
                 <p className="typing-animation text-6xl font-bold leading-relaxed whitespace-nowrap overflow-hidden select-none">Eu sou o Matheus Feijó</p>
                 <p className="subtitle-apresentation whitespace-nowrap overflow-hidden text-4xl">Desenvolvedor Web</p>
             </div>
-            <button onClick={(e) => {
-                e.preventDefault();
-                setIsOpenModal(true);
-            }}>Mais detalhes</button>
+            <button
+                className="more-details"
+                onClick={(e) => {
+                    e.preventDefault();
+                    setIsOpenModal(true);
+                }}>Mais detalhes</button>
 
             <div className="flex gap-8">
                 <button className="h-20 w-20">

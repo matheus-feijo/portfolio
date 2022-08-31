@@ -10,11 +10,14 @@ const skills = {
 
     python: 'Minha primeira linguagem em que aprendi a programar, tenho um enorme carinho por ela e se tornou minha linguagem de segurança na qual sempre que preciso solucionar algum problema rapidamente recorro a ela. Além disso, em meus prijetos de pesquisa utilizava-a para tratamento de dados com as bibliotecas pandas e numpy;',
 
-    html: 'qaa',
-    css: 'ss',
+    html: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+
+    css: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+
     mysql: 'Meu primeiro banco de dados relacional que aprendi, utilizo regularmente quando preciso criar aplicações com estrutura simples de ligação entre tabelas',
 
-    nextjs: 'ggg',
+    nextjs: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+
     default: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum'
 }
 
@@ -40,7 +43,7 @@ export function Skills() {
             <p className="text-3xl font-bold pl-20 pb-5 select-none">Habilidades</p>
 
             <div className="flex gap-5">
-                <div className="flex flex-wrap gap-10 pl-20 w-1/2 max-h-64">
+                <div className="flex flex-wrap gap-10 pl-20 w-1/2 h-auto">
                     {/**JAVA SCRIPT */}
                     <button className={`p-5 outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${description.name === 'javascript' ? 'bg-slate-400' : 'none'}`}
                         onMouseMove={() => {
