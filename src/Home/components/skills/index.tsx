@@ -35,8 +35,9 @@ export function Skills() {
 
     return (
 
-        <div>
-            <p className="text-3xl font-bold pl-20 pb-5">Habilidades</p>
+        <div style={{
+        }}>
+            <p className="text-3xl font-bold pl-20 pb-5 select-none">Habilidades</p>
 
             <div className="flex gap-5">
                 <div className="flex flex-wrap gap-10 pl-20 w-1/2 max-h-64">

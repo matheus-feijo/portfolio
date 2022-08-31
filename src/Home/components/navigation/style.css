@@ -2,6 +2,11 @@ li{
     padding: 20px;
     border-bottom: none;
     font-size: 26px;
+    user-select: none;
+}
+
+li :hover{
+    border-bottom: 2px solid rgba(0,0,0,0.6);
 }
 
 li :focus{

@@ -1,3 +1,7 @@
+.container-apresentation{
+    grid-template-rows: 50vh 2vh 40vh;
+}
+
 
 
 .typing-animation{

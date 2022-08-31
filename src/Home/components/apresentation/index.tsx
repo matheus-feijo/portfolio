@@ -1,14 +1,23 @@
 
+import { useState } from "react";
+import { AboutMe } from "./aboutMe";
 import "./style.css";
 
 export function Apresentation() {
 
+    const [isOpenModal, setIsOpenModal] = useState(false);
+
     return (
-        <div className="grid place-items-center h-[100vh] w-full grid-rows-[60vh]">
+        <div className="container-apresentation grid place-items-center h-[100vh] w-full">
             <div>
                 <p className="typing-animation text-6xl font-bold leading-relaxed whitespace-nowrap overflow-hidden select-none">Eu sou o Matheus Feijó</p>
-                <p className="subtitle-apresentation whitespace-nowrap overflow-hidden text-4xl select-none">Desenvolvedor frontEnd</p>
+                <p className="subtitle-apresentation whitespace-nowrap overflow-hidden text-4xl">Desenvolvedor Web</p>
             </div>
+            <button onClick={(e) => {
+                e.preventDefault();
+                setIsOpenModal(true);
+            }}>Mais detalhes</button>
+
             <div className="flex gap-8">
                 <button className="h-20 w-20">
                     <a href="https://github.com/matheus-feijo" target="_blank" rel="noreferrer">
@@ -26,6 +35,8 @@ export function Apresentation() {
                     </a>
                 </button>
             </div>
+
+            {isOpenModal && <AboutMe open={isOpenModal} setOpen={setIsOpenModal} />}
 
         </div>
     )

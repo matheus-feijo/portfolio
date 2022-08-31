@@ -1,3 +1,4 @@
+import { UIEvent } from "react";
 import "./globalStyle.css";
 import { Home } from "./Home";
 
