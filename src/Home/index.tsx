@@ -7,18 +7,14 @@ import { Projects } from "./components/projects";
 import { Skills } from "./components/skills";
 
 export function Home() {
-    const handleScroll = (event: UIEvent<HTMLDivElement>) => {
-        console.log('scrollTop: ', event.currentTarget.scrollTop);
-        console.log('offsetHeight: ', event.currentTarget.offsetHeight);
-    }
 
     return (
-        <div onScroll={handleScroll} className="h-auto overflow-scroll">
+        <Fragment>
             <Navigation />
             <Apresentation />
             <Skills />
             <Projects />
             <Experiences />
-        </div>
+        </Fragment>
     )
 }

@@ -52,14 +52,12 @@ export function AboutMe(props: AboutMeProps) {
                                     Sobre
                                 </Dialog.Title>
 
-                                <Dialog.Description>
-                                    <div className="flex gap-6">
-                                        <img src={perfil} className="w-40 h-40 rounded-2xl" />
-                                        <p className="text-justify">Meu nome é Matheus Feijó tenho 21 anos, sou estudante de Ciência da Computação na UFMT, buscando cada vez mais conhecimento na área de desenvolvimento web. Entrei no mundo da programação no ano de 2019 devido a faculdade. A partir de que fui me interessando mais, fui buscando outros meios de conhecimento além da faculdade.</p>
-                                    </div>
-
-                                </Dialog.Description>
-
+                                <div className="flex gap-6">
+                                    <img src={perfil} className="w-40 h-40 rounded-2xl" alt="foto do matheus feijo" />
+                                    <p className="text-justify">
+                                        Meu nome é Matheus Feijó tenho 21 anos, sou estudante de Ciência da Computação na UFMT, buscando cada vez mais conhecimento na área de desenvolvimento web. Entrei no mundo da programação no ano de 2019 devido a faculdade. A partir de que fui me interessando mais, fui buscando outros meios de conhecimento além da faculdade.
+                                    </p>
+                                </div>
                                 <div className="mt-4 flex justify-center">
                                     <button
                                         type="button"
