@@ -1,22 +1,6 @@
-import { useEffect } from "react"
-import { api } from "../../../services/api"
-
 
 
 export function Projects() {
-
-    const getRepos = async () => {
-        const repos = await api.get('/repos').then((res) => {
-            console.log(res);
-        }).catch((err) => {
-            console.log(err);
-        })
-    }
-
-    useEffect(() => {
-        //getRepos();
-    }, [])
-
 
     const cards = [
         {
