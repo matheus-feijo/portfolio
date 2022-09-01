@@ -46,7 +46,7 @@ export function Experiences() {
         setText(arrayExp[pos][1])
 
         await setOpenDescribeExp(true);
-        window.scrollTo({ behavior: 'smooth', top: 1800 })
+        window.scrollTo({ behavior: 'smooth', top: 10000 })
 
 
     }
@@ -58,7 +58,7 @@ export function Experiences() {
                 <p className="text-3xl font-bold pl-20">Experiências</p>
             </div>
 
-            <div className="flex justify-around pl-20 flex-wrap gap-5">
+            <div className="flex justify-around flex-wrap gap-5">
                 {/**PROJETO DE PESQUISA 1 */}
                 <div className=" w-80 h-12 text-center">
                     <button

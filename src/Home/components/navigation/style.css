@@ -10,7 +10,7 @@ li :hover{
 }
 
 li :focus{
-    animation: change-focus-nav 5s 0ms;
+    animation: change-focus-nav 2s 0ms;
     
 }
 
