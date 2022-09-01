@@ -1,5 +1,4 @@
-import { Fragment, MouseEvent, UIEvent, UIEventHandler } from "react";
-import { AboutMe } from "./components/apresentation/aboutMe";
+import { Fragment } from "react";
 import { Apresentation } from "./components/apresentation";
 import { Experiences } from "./components/experiences";
 import { Navigation } from "./components/navigation";

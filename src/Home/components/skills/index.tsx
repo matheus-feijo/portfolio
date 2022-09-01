@@ -185,9 +185,9 @@ export function Skills() {
                     </button>
                 </div>
                 <div className="w-1/2 min-h-[35vh]">
-                    <h3 className="font-bold text-center text-2xl">{dataSkill?.name}</h3>
-                    <p className="mt-12 mb-6">{dataSkill?.exp}</p>
-                    <p className="description-language text-justify pr-20">{dataSkill?.describe}</p>
+                    <h3 className="font-bold text-center text-3xl">{dataSkill?.name}</h3>
+                    {dataSkill?.exp && <p className="mt-12 mb-6 text-2xl"><strong>Tempo de Experiência: </strong>{dataSkill?.exp}</p>}
+                    <p className="description-language text-justify pr-20 text-2xl">{dataSkill?.describe}</p>
                 </div>
             </div>
 

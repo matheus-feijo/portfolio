@@ -16,17 +16,18 @@ export function Navigation() {
                 <li>
                     <button onClick={(e) => {
                         e.preventDefault();
-                        window.scrollTo({ behavior: 'smooth', top: 1600 })
+                        window.scrollTo({ behavior: 'smooth', top: 1050 })
                     }}>
-                        Experiências
+                        Projetos
                     </button>
                 </li>
                 <li>
                     <button onClick={(e) => {
                         e.preventDefault();
-                        window.scrollTo({ behavior: "smooth", top: 1100 })
+                        window.scrollTo({ behavior: "smooth", top: 1600 })
                     }}>
-                        Projetos
+                        Experiências
+
                     </button>
                 </li>
 
