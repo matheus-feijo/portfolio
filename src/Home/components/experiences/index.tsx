@@ -1,5 +1,5 @@
 import { MouseEvent, MouseEventHandler, useState } from "react"
-
+import "./style.css";
 
 const exp = {
     pesquisa1: {
@@ -89,11 +89,11 @@ export function Experiences() {
             {
                 openDescribeExp &&
                 <div className="pt-20 grid place-items-center">
-                    <div className="p-5 w-1/2 text-center">
+                    <div className="container-describe-exp p-5 w-1/2 text-center">
                         <p className="text-4xl font-bold">{text?.name}</p>
                         <ul>
-                            {text?.title && <li><b>Titulo do projeto:</b>{text.title}</li>}
-                            <li><b>Atividade realizada:</b>{text?.describe}</li>
+                            {text?.title && <li className="title-exp"><b>Titulo do projeto:</b>{text.title}</li>}
+                            <li className="describe-exp"><b>Atividade realizada:</b>{text?.describe}</li>
                         </ul>
                     </div>
                     <button

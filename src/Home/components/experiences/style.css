@@ -1,0 +1,15 @@
+@media (max-width:996px){
+    .container-describe-exp{
+        padding: 0;
+        width: 100%;
+    }
+
+    .title-exp{
+        font-size: 22px;
+    }
+
+    .describe-exp{
+        font-size: 22px;
+    }
+
+}
