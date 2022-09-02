@@ -6,6 +6,55 @@
     animation: more-details-view 6s 5s normal both;
 }
 
+.subtitle-apresentation{
+    animation: subtitle-view 4s 5s normal both;
+}
+
+.typing-animation{
+    animation: typing 4s 1s normal both,blinkCursor 1s infinite normal;
+}
+
+@media (max-width:400px){
+    .typing-animation{
+        animation: typing-mobile 4s 1s normal both,blinkCursor 1s infinite normal;
+        font-size: 28px;
+    }
+
+    .subtitle-apresentation{
+        font-size: 24px;
+        animation: subtitle-view-mobile 4s 5s normal both;
+    }
+
+    .content-modal{
+        display: grid;
+        place-items: center;
+    }
+
+}
+
+@media (max-width:600px) and (min-width:401px){
+    .typing-animation{
+        animation: typing-kindle 4s 1s normal both,blinkCursor 1s infinite normal;
+        font-size: 38px;
+    }
+
+    .subtitle-apresentation{
+        font-size: 32px;
+        animation: subtitle-view-kindle 4s 5s normal both;
+    }
+
+    .modal-aboutMe{
+        width: 420px;
+
+    }
+
+    .content-modal{
+        display: grid;
+        place-items: center;
+    }
+
+}
+
 
 @keyframes more-details-view {
     from{
@@ -17,11 +66,6 @@
     }
 }
 
-.subtitle-apresentation{
-    animation: subtitle-view 4s 5s normal both;
-}
-
-
 @keyframes subtitle-view {
     from{
         width: 0;
@@ -32,24 +76,42 @@
     }
 }
 
-.typing-animation{
-    animation: typing 4s 1s normal both,blinkCursor 1s infinite normal;
-}
 
-@media (max-width:600px){
-    .typing-animation{
-        animation: typing-mobile 4s 1s normal both,blinkCursor 1s infinite normal;
-        font-size: 38px;
+
+@keyframes subtitle-view-kindle {
+    from{
+        width: 0;
     }
 
-    .subtitle-apresentation{
-        font-size: 32px;
-        animation: subtitle-view-mobile 4s 5s normal both;
+    to{
+        width: 22rem;
+    }
+}
+
+@keyframes subtitle-view-mobile{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 15rem;
     }
 
 }
 
-@keyframes typing-mobile{
+@keyframes typing{
+    from{
+        width: 0;
+        border-right:none;
+    }
+
+    to{
+        width: 36rem;
+        border-right: 2px solid rgba(0,0,0,0.7);
+    }
+}
+
+@keyframes typing-kindle{
     from{
         width: 0;
         border-right:none;
@@ -61,24 +123,14 @@
     }
 }
 
-@keyframes subtitle-view-mobile {
+@keyframes typing-mobile{
     from{
         width: 0;
+        border-right: none;
     }
 
     to{
-        width: 22rem;
-    }
-}
-
-@keyframes typing{
-    from{
-        width: 0;
-        border-right:none;
-    }
-
-    to{
-        width: 37rem;
+        width: 17rem;
         border-right: 2px solid rgba(0,0,0,0.7);
     }
 }

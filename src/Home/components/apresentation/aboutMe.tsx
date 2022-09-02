@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
 import perfil from "../../assets/perfil.jpeg";
+import "./style.css";
 
 type AboutMeProps = {
     open: boolean,
@@ -44,7 +45,7 @@ export function AboutMe(props: AboutMeProps) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                            <Dialog.Panel className="modal-aboutMe w-[640px] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                 <Dialog.Title
                                     as="h3"
                                     className="text-4xl font-bold leading-6 text-gray-900 text-center mb-5"
@@ -52,8 +53,8 @@ export function AboutMe(props: AboutMeProps) {
                                     Sobre
                                 </Dialog.Title>
 
-                                <div className="flex gap-6">
-                                    <img src={perfil} className="w-40 h-40 rounded-2xl" alt="foto do matheus feijo" />
+                                <div className="content-modal flex gap-6">
+                                    <img src={perfil} className="modal-img-aboutMe w-40 h-40 rounded-2xl" alt="foto do matheus feijo" />
                                     <p className="text-justify">
                                         Meu nome é Matheus Feijó tenho 21 anos, sou estudante de Ciência da Computação na UFMT, buscando cada vez mais conhecimento na área de desenvolvimento web. Entrei no mundo da programação no ano de 2019 devido a faculdade. A partir de que fui me interessando mais, fui buscando outros meios de conhecimento além da faculdade.
                                     </p>
