@@ -1,4 +1,24 @@
 
-.description-language{
-    
+@media (max-width:600px){
+    .container-skills{
+        display: none;
+    }
+
+    .container-skills-mobile{
+        display: flex;
+        gap: 20px;
+        padding: 0 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title-skills{
+        padding-left: 0px;
+    }
+
+    .container-general{
+        display: grid;
+        place-items: center;
+    }
+
 }
