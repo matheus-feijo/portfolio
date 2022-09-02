@@ -13,3 +13,15 @@
     }
 
 }
+
+@media (max-width:600px){
+    .title-exp{
+        padding-left: 0px;
+    }
+
+    .container-title{
+        display: flex;
+        justify-content: center;
+    }
+
+}

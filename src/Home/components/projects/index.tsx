@@ -1,4 +1,4 @@
-
+import "./style.css";
 
 export function Projects() {
 
@@ -24,12 +24,12 @@ export function Projects() {
 
 
     return (
-        <div className="pt-20">
-            <p className="text-3xl font-bold pl-20 pb-5">Projetos</p>
-            <div className="flex gap-5 pl-20 flex-wrap pr-20">
+        <div className="container-general pt-20">
+            <p className="title-projects text-3xl font-bold pl-20 pb-5">Projetos</p>
+            <div className="content-projects flex gap-5 pl-20 flex-wrap pr-20">
                 {cards.map((card, ind) => {
                     return (
-                        <button key={ind} className="h-64 w-64 rounded-md outline outline-1 outline-slate-700">
+                        <button key={ind} className="card-project h-64 w-64 rounded-md outline outline-1 outline-slate-700">
                             <span>Em breve</span>
 
                         </button>

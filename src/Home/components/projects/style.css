@@ -1,0 +1,22 @@
+
+
+@media (max-width:600px){
+    .title-projects{
+        padding-left: 0px;
+    }
+
+    .container-general{
+        display: grid;
+        place-items: center;
+    }
+
+    .card-project{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .content-projects{
+        justify-content: center;
+    }
+
+}

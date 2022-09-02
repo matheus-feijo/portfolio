@@ -54,8 +54,8 @@ export function Experiences() {
 
     return (
         <div className="pt-20 pb-20">
-            <div className="pb-10">
-                <p className="text-3xl font-bold pl-20">Experiências</p>
+            <div className="container-title pb-10">
+                <p className="title-exp text-3xl font-bold pl-20">Experiências</p>
             </div>
 
             <div className="flex justify-around flex-wrap gap-5">
