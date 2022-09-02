@@ -15,10 +15,6 @@ export function Projects() {
             img: '',
             name: 'projeto teste3'
         },
-        {
-            img: '',
-            name: 'projeto teste3'
-        },
 
     ]
 
