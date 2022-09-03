@@ -1,47 +1,66 @@
 import { useEffect, useState } from "react";
-import { IconCSS, IconHTML, IconJs, IconMySql, IconNextJs, IconNode, IconPython, IconReact } from "./icons";
+import { IconCSS, IconExpress, IconFirebase, IconHTML, IconJs, IconMui, IconMySql, IconNextJs, IconNode, IconPython, IconReact, IconRedux, IconSequelize, IconTailwind, IconTypeScript } from "./icons";
 import "./style.css";
 
 const habilidades = {
     react: {
         name: 'ReactJS',
         exp: '1 ano(s)',
-        describe: 'Atualmente meu framework favorito para criar aplicações web no frontend'
+        describe: 'Framework utilizado para aplicações frontend desenvolvido pelo Facebook. Atualmente é a stack na qual mais concentro meus estudos, aprimorando conhecimentos sobre as diversas formas de gerenciamento de estados como Redux, ContextAPI e Recoil. Como também, aprender a utilizar outras formas de estilização como Material Ui, TailwindCSS e headless ui',
+        icon: {
+            mui: <IconMui estilo="h-11 w-11" />,
+            tailwind: <IconTailwind estilo="h-11 w-11" />,
+            redux: <IconRedux estilo="h-11 w-11" />
+        }
     },
     nodejs: {
         name: 'NodeJS',
         exp: '1 ano(s)',
-        describe: 'Normalmente recorro a essa ferramenta quando preciso criar um backend de alguma aplicação, utilizando juntamente com o express'
+        describe: 'Ambiente de execução de javaScript server-side, na qual tem uma enorme capacidade de escalabilidade. Stack na qual mais tenho conhecimento para desenvolver aplicações com backend, variando muitas vezes os ORMs para manipular o banco de dados seja relacional com prisma, Knex, TypeORM ou Sequelize. Para subir o servidor sempre recorri ao uso do Express devido sua facilidade de uso e sua eficiência',
+        icon: {
+            sequelize: <IconSequelize estilo="h-11 w-11" />,
+            express: <IconExpress estilo="h-11 w-11" />
+        }
     },
     python: {
         name: 'Python',
         exp: '2 ano(s)',
-        describe: 'Minha primeira linguagem de programação a aprender na faculdade. Posteriormente busquei aperfeiçoar os conhecimentos nessa linguagem por causa dos projetos de pesquisa da universidade'
+        describe: 'Python é uma linguagem de programação de alto nivel, na qual como principal experiência tenho a utilização dessa linguagem para limpeza de dados obtidos através da coleta de dados do solo. Nesse estudo foi-se utilizado diversas bibliotecas, dentre as principais a pandas para abrir e manipular os arquivos, numpy para manipular os dados e o pyplot para plotar gráficos com a finalidade de avaliar os resultados obtidos. Além disso, essa linguagem foi-se utilizada em todo momento durante minha carreira academica na faculdade, fazendo com que obtesse um maior conhecimento acerca dele'
     },
     css: {
         name: 'CSS',
         exp: '1 ano(s)',
-        describe: 'Gosto muito da ampla possibilidade de estilizações que se pode fazer com essa ferramenta'
+        describe: 'Ferramenta de estilização para paginas e aplicações web. Essa ferramenta possui diversas formas de se obter um mesmo resultado, seja utilizando flex box ou grid box, e cada vez mais surge novas possibilidades de se aprimorar o estilo de uma aplicação. A variedade de animações possiveis também.'
     },
     html: {
         name: 'HTML',
         exp: '1 ano(s)',
-        describe: 'Meu primeiro passo para entrar no mundo do desenvolvimento web'
+        describe: 'Linguagem de marcação utilizado para construção de paginas web. Seu conhecimento se tornou muito importante para evitar uso de tags em lugares inapropriados, uso de divs exagerados entre outros.'
     },
     mysql: {
         name: 'MySQL',
         exp: '2 ano(s)',
-        describe: 'Meu primeiro gerenciador de banco de dados relacional, uso muito quando crio alguma aplicação completa',
+        describe: 'Ambiente de gerenciamento de banco de dados. Banco de dados relacional no qual comecei a utilizar devido a faculdade e com isso, acabo utilizando em todos os projetos',
     },
     nextjs: {
         name: 'NextJS',
         exp: '0 ano(s)',
-        describe: 'Por ser apaixonado por React, busco sempre aprender sobre essa ferramenta visto que é um framework melhorado',
+        describe: ' É uma estrutura da web de desenvolvimento front-end React. O aprendizado desse framework aconteceu em decorrência da busca por mais conhecimento pelo framework React',
     },
     javascript: {
         name: 'JavaScript',
         exp: '1 ano(s)',
-        describe: 'Minha linguagem de programação favorita, busco utiliza-la sempre que possivel'
+        describe: ' É uma linguagem de programação interpretada estruturada. Linguagem na qual busquei maior aprendizado após ingressar em meu primeiro estágio, sendo ela a minha principal linguagem utilizada'
+    },
+    typeScript: {
+        name: 'TypeScript',
+        exp: '0 ano(s)',
+        describe: 'É uma linguagem de programação interpretada estruturada fortemente tipada. Principal linguagem de programação estudada atualmente, pois a tipagem das variaveis torna o projeto muito mais coeso e explicativo para novas pessoas que forem ler o código'
+    },
+    firebase: {
+        name: 'Firebase',
+        exp: '0 ano(s)',
+        describe: 'Plataforma para criação de aplicações web desenvolvida pela Google. Essa ferramenta foi aprendida no curso da RocketSeat no qual foi utilizado o firebase como banco de dados online da aplicação.',
     }
 }
 
@@ -143,11 +162,27 @@ export function Skills() {
                     >
                         <IconNextJs estilo={styleDefault} />
                     </button>
+
+                    <button className={`p-5 outline outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'Firebase' ? 'bg-slate-400' : 'none'}`}
+                        onMouseMove={() => {
+                            showDescription('firebase');
+                        }}
+                    >
+                        <IconFirebase estilo={styleDefault} />
+                    </button>
+
+                    <button className={`p-5 outline outline-1 outline-gray-800 rounded-md hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'TypeScript' ? 'bg-slate-400' : 'none'}`}
+                        onMouseMove={() => {
+                            showDescription('typeScript');
+                        }}
+                    >
+                        <IconTypeScript estilo={styleDefault} />
+                    </button>
                 </div>
                 <div className="w-1/2 min-h-[35vh]">
                     <h3 className="font-bold text-center text-3xl">{dataSkill?.name}</h3>
                     {dataSkill?.exp && <p className="mt-12 mb-6 text-2xl"><strong>Tempo de Experiência: </strong>{dataSkill?.exp}</p>}
-                    <p className="description-language text-justify pr-20 text-2xl">{dataSkill?.describe}</p>
+                    <p className="description-language text-justify pr-20 text-xl">{dataSkill?.describe}</p>
                 </div>
             </div>
 
@@ -218,6 +253,22 @@ export function Skills() {
                 >
                     <IconNextJs estilo={styleMobile} />
                 </button>
+                <button
+                    className={`p-3 outline outline-1 outline-gray-800 rounded-md 
+                    hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'Firebase' ? 'bg-slate-400' : 'none'}`
+                    }
+                >
+                    <IconFirebase estilo={styleMobile} />
+                </button>
+
+                <button
+                    className={`p-3 outline outline-1 outline-gray-800 rounded-md 
+                    hover:bg-slate-400 transition-colors duration-75 ${dataSkill?.name === 'TypeScript' ? 'bg-slate-400' : 'none'}`
+                    }
+                >
+                    <IconTypeScript estilo={styleMobile} />
+                </button>
+
             </div>
         </div>
     )

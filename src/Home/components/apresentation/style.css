@@ -3,26 +3,26 @@
 }
 
 .more-details{
-    animation: more-details-view 6s 5s normal both;
+    animation: more-details-view 4s 4s normal both;
 }
 
 .subtitle-apresentation{
-    animation: subtitle-view 4s 5s normal both;
+    animation: subtitle-view 3s 3s normal both;
 }
 
 .typing-animation{
-    animation: typing 4s 1s normal both,blinkCursor 1s infinite normal;
+    animation: typing 3s 0s normal both,blinkCursor 1s infinite normal;
 }
 
 @media (max-width:400px){
     .typing-animation{
-        animation: typing-mobile 4s 1s normal both,blinkCursor 1s infinite normal;
+        animation: typing-mobile 3s 0s normal both,blinkCursor 1s infinite normal;
         font-size: 28px;
     }
 
     .subtitle-apresentation{
         font-size: 24px;
-        animation: subtitle-view-mobile 4s 5s normal both;
+        animation: subtitle-view-mobile 3s 3s normal both;
     }
 
     .content-modal{
@@ -34,13 +34,13 @@
 
 @media (max-width:600px) and (min-width:401px){
     .typing-animation{
-        animation: typing-kindle 4s 1s normal both,blinkCursor 1s infinite normal;
+        animation: typing-kindle 3s 0s normal both,blinkCursor 1s infinite normal;
         font-size: 38px;
     }
 
     .subtitle-apresentation{
         font-size: 32px;
-        animation: subtitle-view-kindle 4s 5s normal both;
+        animation: subtitle-view-kindle 3s 3s normal both;
     }
 
     .modal-aboutMe{
