@@ -18,7 +18,7 @@ export function Navigation() {
                     <li>
                         <button onClick={(e) => {
                             e.preventDefault();
-                            window.scrollTo({ behavior: 'smooth', top: 1050 })
+                            window.scrollTo({ behavior: 'smooth', top: 1200 })
                         }}>
                             Projetos
                         </button>
