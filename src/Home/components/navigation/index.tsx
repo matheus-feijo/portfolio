@@ -26,7 +26,7 @@ export function Navigation() {
                     <li>
                         <button onClick={(e) => {
                             e.preventDefault();
-                            window.scrollTo({ behavior: "smooth", top: 1600 })
+                            window.scrollTo({ behavior: "smooth", top: 10000 })
                         }}>
                             Experiências
 
