@@ -10,7 +10,7 @@ export function Apresentation() {
     return (
         <div className="container-apresentation grid place-items-center h-[100vh] w-full">
             <div>
-                <p className="typing-animation text-6xl font-bold leading-relaxed whitespace-nowrap overflow-hidden select-none">Eu sou o Matheus Feijó</p>
+                <p className={`${navigator.userAgent.search('Firefox') >= 0 && 'firefox-title'} typing-animation text-6xl font-bold leading-relaxed whitespace-nowrap overflow-hidden select-none`}>Eu sou o Matheus Feijó</p>
                 <p className="subtitle-apresentation whitespace-nowrap overflow-hidden text-4xl">Desenvolvedor Front-end</p>
             </div>
             <button
@@ -18,7 +18,8 @@ export function Apresentation() {
                 onClick={(e) => {
                     e.preventDefault();
                     setIsOpenModal(true);
-                }}>Mais detalhes</button>
+                }}>Mais detalhes
+                </button>
 
             <div className="flex gap-8">
                 <button className="h-20 w-20">

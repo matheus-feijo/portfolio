@@ -4,6 +4,7 @@
 
 .more-details{
     animation: more-details-view 4s 4s normal both;
+    z-index: -1;
 }
 
 .subtitle-apresentation{
@@ -12,6 +13,11 @@
 
 .typing-animation{
     animation: typing 3s 0s normal both,blinkCursor 1s infinite normal;
+}
+
+
+.firefox-title{
+    font-weight: 400;
 }
 
 @media (max-width:400px){
@@ -106,7 +112,7 @@
     }
 
     to{
-        width: 36rem;
+        width: 550px;
         border-right: 2px solid rgba(0,0,0,0.7);
     }
 }

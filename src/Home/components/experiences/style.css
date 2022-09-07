@@ -1,3 +1,11 @@
+.container-describe-exp li{
+    padding: 20px;
+    border-bottom: none;
+    font-size: 26px;
+    user-select: none;
+    text-align: justify;
+}
+
 @media (max-width:996px){
     .container-describe-exp{
         padding: 0;
