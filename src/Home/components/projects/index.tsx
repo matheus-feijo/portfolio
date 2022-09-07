@@ -20,7 +20,7 @@ export function Projects() {
 
 
     return (
-        <div className="container-general pt-40">
+        <div className="container-general pt-48">
             <p className="title-projects text-3xl font-bold pl-20 pb-5">Projetos</p>
             <div className="content-projects flex gap-5 pl-20 flex-wrap pr-20">
                 {cards.map((card, ind) => {

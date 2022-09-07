@@ -1,7 +1,20 @@
 import { Fragment } from "react";
 import "./style.css";
 
+
+
+
+
 export function Navigation() {
+
+    const toggleScrool = () => {
+        if (window.screen.availWidth <= 800) {
+            return 1200;
+        }
+
+        return 1400
+    }
+
 
     return (
         <Fragment>
@@ -17,8 +30,9 @@ export function Navigation() {
                     </li>
                     <li>
                         <button onClick={(e) => {
+                            console.log(window.screen);
                             e.preventDefault();
-                            window.scrollTo({ behavior: 'smooth', top: 1200 })
+                            window.scrollTo({ behavior: 'smooth', top: toggleScrool() })
                         }}>
                             Projetos
                         </button>

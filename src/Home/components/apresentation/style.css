@@ -4,7 +4,7 @@
 
 .more-details{
     animation: more-details-view 4s 4s normal both;
-    z-index: -1;
+    z-index: 0;
 }
 
 .subtitle-apresentation{
