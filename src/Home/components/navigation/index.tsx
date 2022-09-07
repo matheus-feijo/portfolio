@@ -23,6 +23,14 @@ export function Navigation() {
                     <li>
                         <button onClick={(e) => {
                             e.preventDefault();
+                            window.scrollTo({ behavior: 'smooth', top: 0 })
+                        }}>
+                            Sobre
+                        </button>
+                    </li>
+                    <li>
+                        <button onClick={(e) => {
+                            e.preventDefault();
                             window.scrollTo({ behavior: 'smooth', top: 700 })
                         }}>
                             Habilidades
