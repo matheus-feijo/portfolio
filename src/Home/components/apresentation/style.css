@@ -27,13 +27,17 @@
     }
 
     .subtitle-apresentation{
-        font-size: 24px;
+        font-size: 21px;
         animation: subtitle-view-mobile 3s 3s normal both;
     }
 
     .content-modal{
         display: grid;
         place-items: center;
+    }
+
+    .firefox-title{
+        font-weight: 400;
     }
 
 }
@@ -45,7 +49,7 @@
     }
 
     .subtitle-apresentation{
-        font-size: 32px;
+        font-size: 28px;
         animation: subtitle-view-kindle 3s 3s normal both;
     }
 
@@ -90,7 +94,7 @@
     }
 
     to{
-        width: 23rem;
+        width: 18rem;
     }
 }
 
@@ -100,7 +104,7 @@
     }
 
     to{
-        width: 15rem;
+        width: 14rem;
     }
 
 }
@@ -124,7 +128,7 @@
     }
 
     to{
-        width: 23rem;
+        width: 21.9rem;
         border-right: 2px solid rgba(0,0,0,0.7);
     }
 }
@@ -136,7 +140,7 @@
     }
 
     to{
-        width: 17rem;
+        width: 16.2rem;
         border-right: 2px solid rgba(0,0,0,0.7);
     }
 }
