@@ -73,7 +73,7 @@ export function Experiences() {
                 openDescribeExp &&
                 <div className="pt-20 grid place-items-center">
                     <div className="container-describe-exp p-5 w-1/2 text-center">
-                        <p className="text-4xl font-bold">{text?.name}</p>
+                        <p className="nome-exp text-4xl font-bold">{text?.name}</p>
                         <ul>
                             {text?.title && <li className="title-exp"><b>Titulo do projeto:</b>{text.title}</li>}
                             <li className="describe-exp"><b>Atividade realizada:</b>{text?.describe}</li>
