@@ -55,9 +55,14 @@ export function AboutMe(props: AboutMeProps) {
 
                                 <div className="content-modal flex gap-6">
                                     <img src={perfil} className="modal-img-aboutMe w-40 h-40 rounded-2xl" alt="foto do matheus feijo" />
-                                    <p className="text-justify">
-                                        Meu nome é Matheus Feijó tenho 21 anos, sou estudante de Ciência da Computação na UFMT, buscando cada vez mais conhecimento na área de desenvolvimento web. Entrei no mundo da programação no ano de 2019 devido a faculdade. A partir de que fui me interessando mais, fui buscando outros meios de conhecimento além da faculdade.
-                                    </p>
+                                    <div>
+                                        <p className="text-justify text-lg indent-5">
+                                            Meu nome é Matheus Feijó, tenho 21 anos, sou estudante de ciência da Computação na UFMT. Comecei a me interessar sobre o desenvolvimento de software desde outubro de 2021, época na qual entrei em um estágio com DEV. Desde então, busco cada vez mais aprimorar meus conhecimentos sobre a área dando mais enfase no Front-end, pois foi a parte em que mais me interessei e me sinto feliz em estudar e praticar.
+                                        </p>
+                                        <p className="text-justify text-lg indent-5">
+                                            Além disso, participei de projetos de pesquisa no qual me deram uma boa experiência relacionadas a performance dos algoritmos e lógica, visto que era responsável por realizar a filtragem de uma grande quantidade de dados com Python.
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="mt-4 flex justify-center">
                                     <button

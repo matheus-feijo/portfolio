@@ -3,7 +3,7 @@
 }
 
 .more-details{
-    animation: more-details-view 4s 4s normal both;
+    animation: more-details-view 3s 3s normal both;
     z-index: 0;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .typing-animation{
-    animation: typing 3s 0s normal both,blinkCursor 1s infinite normal;
+    animation: typing 2.8s 0s normal both,blinkCursor 1s infinite normal;
 }
 
 
