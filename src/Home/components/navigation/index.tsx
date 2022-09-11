@@ -38,7 +38,6 @@ export function Navigation() {
                     </li>
                     <li>
                         <button onClick={(e) => {
-                            console.log(window.screen);
                             e.preventDefault();
                             window.scrollTo({ behavior: 'smooth', top: toggleScrool() })
                         }}>

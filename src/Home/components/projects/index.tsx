@@ -1,21 +1,15 @@
 import "./style.css";
+import calculadora from "../../assets/calculadora.png";
 
 export function Projects() {
 
     const cards = [
         {
-            img: '',
-            name: 'projeto teste'
+            img: calculadora,
+            name: 'calculadora',
+            describe: 'Projeto de uma calculadora simples',
+            link: 'https://calculadora-iota-six.vercel.app/'
         },
-        {
-            img: '',
-            name: 'projeto teste2'
-        },
-        {
-            img: '',
-            name: 'projeto teste3'
-        },
-
     ]
 
 
@@ -25,10 +19,12 @@ export function Projects() {
             <div className="content-projects flex gap-5 pl-20 flex-wrap pr-20">
                 {cards.map((card, ind) => {
                     return (
-                        <button key={ind} className="card-project h-64 w-64 rounded-md outline outline-1 outline-slate-700">
-                            <span>Em breve</span>
-
-                        </button>
+                        <a href={card.link} target='_blank' rel="noreferrer" key={ind}>
+                            <button className="card-project h-60 w-60 rounded-md flex flex-col">
+                                <img src={card.img} alt={card.name} className="w-full h-3/4 rounded-md" />
+                                <span className="w-full h-1/4 flex items-center justify-center">{card.name}</span>
+                            </button>
+                        </a>
                     )
                 })}
             </div>
