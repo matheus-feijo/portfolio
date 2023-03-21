@@ -9,10 +9,13 @@
 
 .subtitle-apresentation{
     animation: subtitle-view 3s 3s normal both;
+    font-size: 29px;
 }
 
 .typing-animation{
     animation: typing 2.8s 0s normal both,blinkCursor 1s infinite normal;
+    font-size: 47px;
+    
 }
 
 
@@ -23,11 +26,11 @@
 @media (max-width:400px){
     .typing-animation{
         animation: typing-mobile 3s 0s normal both,blinkCursor 1s infinite normal;
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .subtitle-apresentation{
-        font-size: 21px;
+        font-size: 16px;
         animation: subtitle-view-mobile 3s 3s normal both;
     }
 
@@ -45,11 +48,11 @@
 @media (max-width:600px) and (min-width:401px){
     .typing-animation{
         animation: typing-kindle 3s 0s normal both,blinkCursor 1s infinite normal;
-        font-size: 38px;
+        font-size: 30px;
     }
 
     .subtitle-apresentation{
-        font-size: 28px;
+        font-size: 22px;
         animation: subtitle-view-kindle 3s 3s normal both;
     }
 
