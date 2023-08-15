@@ -46,7 +46,7 @@ export function AboutMe({ isOpen, setIsOpen }: AboutMeProps) {
                   Sobre
                 </Dialog.Title>
 
-                <Dialog.Description className="text-justify">
+                <Dialog.Description>
                   <div className="flex justify-center mb-2">
                     <img
                       src={perfil}
@@ -54,18 +54,19 @@ export function AboutMe({ isOpen, setIsOpen }: AboutMeProps) {
                       alt="foto do matheus feijo"
                     />
                   </div>
-                  <div>
-                    Meu nome é Matheus Feijó, tenho 21 anos, sou estudante de
-                    ciência da Computação na UFMT. Comecei a me interessar sobre
-                    o desenvolvimento de software desde outubro de 2021, época
-                    na qual entrei em um estágio com DEV. Desde então, busco
-                    cada vez mais aprimorar meus conhecimentos sobre a área
-                    dando mais enfase no Front-end, pois foi a parte em que mais
-                    me interessei e me sinto feliz em estudar e praticar.
+                  <div className="text-justify">
+                    Olá, seja bem-vindo ao portfólio do Matheus. Com 22 anos de
+                    idade, ele concluiu sua formação em Ciência da Computação na
+                    UFMT no ano de 2023. Matheus é habilidoso em duas línguas:
+                    Português e Inglês. Como desenvolvedor, ele detém
+                    competências tanto no campo do backend quanto do frontend,
+                    embora tenha direcionado seu enfoque principalmente para o
+                    desenvolvimento frontend, com especialização no framework
+                    ReactJs.
                   </div>
                 </Dialog.Description>
 
-                <Dialog.Overlay className="flex justify-end">
+                <Dialog.Overlay className="flex justify-center mt-2">
                   <button
                     onClick={handleCloseModal}
                     className="text-white bg-red-600 rounded p-2 text-sm font-semibold hover:bg-red-900 hover:transition-all"

@@ -6,10 +6,14 @@ interface ICardExpProps {
 export function CardExp({ title, description }: ICardExpProps) {
   return (
     <div className="max-w-lg border-2">
-      <h1 className="text-lg font-semibold mb-5 border-b-2 leading-relaxed p-2">
+      <h1 className="text-lg font-semibold mb-2 border-b-2 leading-relaxed p-2">
         {title}
       </h1>
-      <p className="p-2 text-justify indent-10">{description}</p>
+      <div>
+        {description.split("\n").map((text) => (
+          <p className="px-2 pt-1 indent-10 text-justify">{text}</p>
+        ))}
+      </div>
     </div>
   );
 }
