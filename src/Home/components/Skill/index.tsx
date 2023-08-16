@@ -3,7 +3,7 @@ import { ItemList } from "./components/ItemList";
 export function Skill() {
   return (
     <>
-      <div className="p-10">
+      <div className="p-10 mobile:p-5">
         <h1 className="text-5xl mobile:text-2xl font-semibold pl-10">
           Habilidades
         </h1>
