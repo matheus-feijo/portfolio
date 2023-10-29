@@ -1,10 +1,10 @@
-import { Fragment, useState } from "react";
-import { Navigation } from "./components/navigation";
-import { AboutMe } from "./components/AbouteMe";
-import { Exp } from "./components/Exp";
+import { useState } from "react";
+import { TheHeader } from "./components/TheHeader";
+import { ModalAboutMe } from "./components/ModalAboutMe";
+import { Experience } from "./components/Experience";
 import { Skill } from "./components/Skill";
 
-export function Home() {
+export function Page() {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const handleOpenModal = () => {
@@ -12,9 +12,12 @@ export function Home() {
   };
 
   return (
-    <Fragment>
-      <Navigation />
-      <div className="grid grid-rows-principal place-items-center h-screen w-full">
+    <>
+      <TheHeader />
+      <div
+        id="#sobre"
+        className="grid grid-rows-principal place-items-center h-screen w-full"
+      >
         <div>
           <h1 className="font-semibold leading-relaxed whitespace-nowrap overflow-hidden select-none animate-wiggle text-5xl pr-1 mobile:text-2xl sm:leading-relaxed">
             Eu sou o Matheus Feijó
@@ -68,11 +71,15 @@ export function Home() {
         </div>
       </div>
 
-      <Exp />
+      <div id="#experience">
+        <Experience />
+      </div>
 
-      <Skill />
+      <div id="#skill">
+        <Skill />
+      </div>
 
-      <AboutMe isOpen={isOpenModal} setIsOpen={setIsOpenModal} />
-    </Fragment>
+      <ModalAboutMe isOpen={isOpenModal} setIsOpen={setIsOpenModal} />
+    </>
   );
 }

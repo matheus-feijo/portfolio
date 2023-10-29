@@ -1,13 +1,13 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
-import perfil from "../../../assets/foto-perfil.jpg";
+import perfil from "../assets/foto-perfil.jpg";
 
-interface AboutMeProps {
+interface ModalAboutMeProps {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export function AboutMe({ isOpen, setIsOpen }: AboutMeProps) {
+export function ModalAboutMe({ isOpen, setIsOpen }: ModalAboutMeProps) {
   const handleCloseModal = () => {
     setIsOpen(false);
   };

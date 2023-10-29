@@ -1,8 +1,8 @@
 import "./globalStyle.css";
-import { Home } from "./Home";
+import { Page } from "./page";
 
 function App() {
-  return <Home />;
+  return <Page />;
 }
 
 export default App;

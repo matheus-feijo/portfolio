@@ -1,16 +1,16 @@
-import { Fragment } from "react";
-import { NavItem } from "./components/NavItem";
 import { Menu, Transition } from "@headlessui/react";
 import { List } from "@phosphor-icons/react";
+import { ItemHeader } from "./ItemHeader";
+import { Fragment } from "react";
 
-export function Navigation() {
+export function TheHeader() {
   return (
-    <Fragment>
+    <>
       <div className="z-10 fixed w-full p-5 mobile:hidden backdrop-blur-sm">
         <ul className="justify-around flex items-center h-8">
-          <NavItem name="Sobre" scroll={0} />
-          <NavItem name="Experiências" scroll={700} />
-          <NavItem name="Habilidades" scroll={1500} />
+          <ItemHeader label="Sobre" containerId="#sobre" />
+          <ItemHeader label="Experiências" containerId="#experience" />
+          <ItemHeader label="Habilidades" containerId="#skill" />
         </ul>
       </div>
 
@@ -81,6 +81,6 @@ export function Navigation() {
           </Transition>
         </Menu>
       </div>
-    </Fragment>
+    </>
   );
 }

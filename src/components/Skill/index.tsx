@@ -1,4 +1,4 @@
-import { ItemList } from "./components/ItemList";
+import { ItemList } from "./ItemList";
 
 export function Skill() {
   return (
