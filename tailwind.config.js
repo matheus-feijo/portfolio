@@ -1,58 +1,128 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  prefix: "",
   theme: {
-    screens:{
-      "mobile":{"max":"500px"}
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    screens: {
+      "mobile": { "max": "600px" }
     },
     extend: {
-      gridTemplateRows:{
-        "principal":"48vh 4vh 48vh"
+      gridTemplateRows: {
+        "principal": "20vh 10vh 20vh",
+        "mobile": "15vh 5vh 15vh"
       },
+
       animation: {
         wiggle: 'title 2.8s 0s normal both,blinkCursor 1s infinite normal',
-        "subtitle-view": "subtitle 5s 3s normal both",
-        "more-details":"details 3s 3s normal both"
+        "habilidades": "habilidadeAnimation 5s 3s normal both",
+        "more-details": "details 3s 3s normal both",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+
         title: {
-          'from': {  
+          'from': {
             width: "0",
-            borderRight:"2px solid rgba(0,0,0,0.7)" 
+            borderRight: "2px solid rgba(0,0,0,0.7)"
           },
           'to': {
             width: "100%",
-            borderRight: "2px solid rgba(0,0,0,0.7)" 
+            borderRight: "2px solid rgba(0,0,0,0.7)"
           },
         },
-        blinkCursor:{
+        blinkCursor: {
           "from": {
-            borderRightColor:" rgba(0,0,0,0.7)"
+            borderRightColor: " #FF4A57"
           },
-          "to":{
-            borderRightColor:"transparent"
+          "to": {
+            borderRightColor: "transparent"
           }
         },
-        subtitle:{
-          "from":{
-            width:"0"
+        habilidadeAnimation: {
+          "from": {
+            opacity: "0",
+            display: "none"
           },
-          "to":{
-            width:"100%"
+          "to": {
+            opacity: "1",
+            display: "flex"
           }
         },
-        details:{
-          "from":{
-            opacity:"0",
-            display:"none"
+        details: {
+          "from": {
+            opacity: "0",
+            display: "none"
           },
-          "to":{
-            opacity:"1",
-            display:"inline"
+          "to": {
+            opacity: "1",
+            display: "inline"
           }
         }
       },
+
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 }

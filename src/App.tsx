@@ -1,8 +1,27 @@
+import { useState } from "react";
+import { AboutMe } from "./components/AboutMe";
+import { TheHeader } from "./components/TheHeader";
 import "./globalStyle.css";
-import { Page } from "./page";
+import { Menu } from "./@types/Menu";
+import { Experience } from "./components/Experience";
 
 function App() {
-  return <Page />;
+  const [menuSelected, setMenuSelected] = useState<Menu>("inicio");
+
+  return (
+    <>
+      <TheHeader
+        onChangeMenu={(menu) => {
+          setMenuSelected(menu);
+        }}
+        menu={menuSelected}
+      />
+
+      {menuSelected === "inicio" && <AboutMe />}
+
+      {menuSelected === "experiencias" && <Experience />}
+    </>
+  );
 }
 
 export default App;
