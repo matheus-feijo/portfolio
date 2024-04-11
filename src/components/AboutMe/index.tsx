@@ -146,26 +146,26 @@ export function AboutMe() {
 
         <div className="flex flex-col items-center gap-5">
           <img
-            className="w-4/5 h-4/5 max-w-[20rem] max-h-80 rounded-full mobile:w-32 mobile:h-32 notebook:w-64 notebook:h-64"
+            className="w-4/5 h-4/5 max-w-[18rem] max-h-72 rounded-full mobile:w-32 mobile:h-32 "
             src={foto}
             alt="Foto do deselvovedor referenciado no site"
           />
 
           <ol className="flex flex-col gap-2 mobile:pl-5 mobile:pr-5">
-            <li className="text-white text-lg flex items-center gap-2 mobile:text-base notebook:text-base">
+            <li className="text-white text-lg flex items-center gap-2 mobile:text-base ">
               <Signpost size={32} /> Formado em Ciência da Computação na UFMT
             </li>
 
-            <li className="text-white text-lg flex items-center gap-2 mobile:text-base notebook:text-base">
+            <li className="text-white text-lg flex items-center gap-2 mobile:text-base ">
               <Signpost size={32} />
               Ingles Intermediário/Fluente
             </li>
 
-            <li className="text-white text-lg flex items-center gap-2 mobile:text-base notebook:text-base">
+            <li className="text-white text-lg flex items-center gap-2 mobile:text-base ">
               <Signpost size={32} />
               Experiência em Desenvolvimento Front-end: 3 ano(s)
             </li>
-            <li className="text-white text-lg flex items-center gap-2 mobile:text-base notebook:text-base">
+            <li className="text-white text-lg flex items-center gap-2 mobile:text-base ">
               <Signpost size={32} />
               Experiência em Desenvolvimento Back-end: 1 ano
             </li>
