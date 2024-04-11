@@ -7,7 +7,7 @@ export function AboutMe() {
       <div className="w-screen pl-24 pr-24 pt-24 flex gap-2 justify-center items-start flex-wrap mobile:pl-0 mobile:pr-0 mobile:pt-1 ">
         <div className="grid grid-rows-principal place-items-center w-2/4 mobile:w-full mobile:grid-rows-mobile">
           <div>
-            <h1 className="text-[#FF4A57] leading-relaxed whitespace-nowrap overflow-hidden select-none animate-wiggle text-5xl pr-1 mobile:text-2xl sm:leading-relaxed">
+            <h1 className="text-vermelhoPrincipal leading-relaxed whitespace-nowrap overflow-hidden select-none animate-wiggle text-5xl pr-1 mobile:text-2xl sm:leading-relaxed">
               Matheus Feijó
             </h1>
           </div>
@@ -17,7 +17,7 @@ export function AboutMe() {
           </p>
 
           <div className="flex flex-col gap-5 justify-center items-center animate-habilidades">
-            <h1 className="text-[#FF4A57] text-5xl mobile:text-2xl">
+            <h1 className="text-vermelhoPrincip text-5xl mobile:text-2xl">
               Habilidades
             </h1>
 
