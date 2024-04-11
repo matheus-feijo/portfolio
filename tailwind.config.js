@@ -21,8 +21,8 @@ module.exports = {
     },
     extend: {
       gridTemplateRows: {
-        "principal": "20vh 10vh 20vh",
-        "mobile": "15vh 5vh 15vh"
+        "principal": "20vh 5vh 25vh",
+        "mobile": "10vh 5vh 25vh"
       },
 
       animation: {

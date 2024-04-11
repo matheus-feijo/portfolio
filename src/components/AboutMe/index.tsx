@@ -5,14 +5,14 @@ export function AboutMe() {
   return (
     <>
       <div className="w-screen pl-24 pr-24 pt-24 flex gap-2 justify-center items-start flex-wrap mobile:pl-0 mobile:pr-0 mobile:pt-1 ">
-        <div className="grid grid-rows-principal place-items-center w-2/4 mobile:w-full mobile:grid-rows-mobile">
+        <div className="grid grid-rows-principal justify-items-center items-end w-2/4 mobile:w-full mobile:grid-rows-mobile">
           <div>
             <h1 className="text-vermelhoPrincipal leading-relaxed whitespace-nowrap overflow-hidden select-none animate-wiggle text-5xl pr-1 mobile:text-2xl sm:leading-relaxed">
               Matheus Feijó
             </h1>
           </div>
 
-          <p className="text-white text-xl  text-justify animate-more-details mobile:text-lg">
+          <p className="text-white text-xl text-justify animate-more-details mobile:text-lg">
             Desenvolvedor de Sotware.
           </p>
 
