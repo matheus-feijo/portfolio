@@ -14,7 +14,9 @@ import { Globe } from "@phosphor-icons/react";
 export function Projects() {
   return (
     <>
-      <h1 className="text-center text-white text-5xl pt-10 pb-10">Projetos</h1>
+      <h1 className="text-center text-white text-5xl pt-10 pb-10 mobile:text-4xl">
+        Projetos
+      </h1>
 
       <div className="p-10 flex gap-5 flex-wrap justify-center">
         <Card className="w-96 h-96 ">

@@ -1,5 +1,5 @@
 import { GithubLogo, LinkedinLogo, List } from "@phosphor-icons/react";
-import { Menu } from "../../@types/Menu";
+
 import {
   Menubar,
   MenubarContent,
@@ -7,39 +7,37 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "../../components-ui/ui/menubar";
+import { useNavigate } from "react-router-dom";
 
-export function TheHeader({
-  onChangeMenu,
-  menu,
-}: {
-  onChangeMenu: (menu: Menu) => void;
-  menu: Menu;
-}) {
+export function TheHeader() {
+  const navigate = useNavigate();
+  const menuSelected = window.location.pathname;
+
   return (
     <>
       <header className="w-screen h-16  flex justify-center">
         <div className="w-4/5 bg-[#181a28] rounded flex justify-around mobile:hidden">
           <button
             className={`text-${
-              menu === "inicio" ? "[#FF4A57]" : "white"
+              menuSelected === "/" ? "[#FF4A57]" : "white"
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
-            onClick={() => onChangeMenu("inicio")}
+            onClick={() => navigate("/")}
           >
             Inicio
           </button>
           <button
             className={`text-${
-              menu === "projetos" ? "[#FF4A57]" : "white"
+              menuSelected === "/projetos" ? "[#FF4A57]" : "white"
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
-            onClick={() => onChangeMenu("projetos")}
+            onClick={() => navigate("/projetos")}
           >
             Projetos
           </button>
           <button
             className={`text-${
-              menu === "experiencias" ? "[#FF4A57]" : "white"
+              menuSelected === "/experiencias" ? "[#FF4A57]" : "white"
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
-            onClick={() => onChangeMenu("experiencias")}
+            onClick={() => navigate("/experiencias")}
           >
             Experiências
           </button>
@@ -76,27 +74,31 @@ export function TheHeader({
               </MenubarTrigger>
               <MenubarContent>
                 <MenubarItem
-                  onClick={() => onChangeMenu("inicio")}
-                  className={`text-${menu === "inicio" && "[#FF4A57]"}`}
+                  onClick={() => navigate("/")}
+                  className={`text-${menuSelected === "/" && "[#FF4A57]"}`}
                 >
                   Inicio
                 </MenubarItem>
                 <MenubarItem
-                  onClick={() => onChangeMenu("experiencias")}
+                  onClick={() => navigate("/experiencias")}
                   className={`text-${
-                    menu === "experiencias" && "[#FF4A57]" && "[#FF4A57]"
+                    menuSelected === "/experiencias" &&
+                    "[#FF4A57]" &&
+                    "[#FF4A57]"
                   }`}
                 >
                   Experiências
                 </MenubarItem>
                 <MenubarItem
-                  onClick={() => onChangeMenu("projetos")}
-                  className={`text-${menu === "projetos" && "[#FF4A57]"}`}
+                  onClick={() => navigate("/projetos")}
+                  className={`text-${
+                    menuSelected === "/projetos" && "[#FF4A57]"
+                  }`}
                 >
                   Projetos
                 </MenubarItem>
 
-                <MenubarItem onClick={() => onChangeMenu("projetos")}>
+                <MenubarItem>
                   <a
                     rel="noreferrer"
                     href="https://www.linkedin.com/in/matheus-feij%C3%B3-058013208/"

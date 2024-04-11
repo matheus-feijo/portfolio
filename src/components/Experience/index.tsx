@@ -11,7 +11,9 @@ export function Experience() {
 
   return (
     <>
-      <h1 className="text-white text-5xl text-center pt-10">Experiências</h1>
+      <h1 className="text-white text-5xl text-center pt-10 mobile:text-4xl">
+        Experiências
+      </h1>
 
       <div className="flex justify-center items-center">
         <Accordion type="single" collapsible className="p-10 w-4/5 ">
