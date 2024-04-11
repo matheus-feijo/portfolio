@@ -17,7 +17,7 @@ export function AboutMe() {
           </p>
 
           <div className="flex flex-col gap-5 justify-center items-center animate-habilidades">
-            <h1 className="text-vermelhoPrincip text-5xl mobile:text-2xl">
+            <h1 className="text-vermelhoPrincipal text-5xl mobile:text-2xl">
               Habilidades
             </h1>
 

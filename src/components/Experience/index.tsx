@@ -28,7 +28,9 @@ export function Experience() {
           >
             <AccordionTrigger
               className={` ${
-                contentSelected === "item-1" ? "text-[#FF4A57]" : "text-white"
+                contentSelected === "item-1"
+                  ? "text-vermelhoPrincipal"
+                  : "text-white"
               } text-xl mobile:text-lg`}
             >
               Desenvolvedor de Software Policia Militar (2021-2023)
@@ -58,7 +60,9 @@ export function Experience() {
           >
             <AccordionTrigger
               className={` ${
-                contentSelected === "item-2" ? "text-[#FF4A57]" : "text-white"
+                contentSelected === "item-2"
+                  ? "text-vermelhoPrincipal"
+                  : "text-white"
               } text-xl mobile:text-lg`}
             >
               Desenvolvedor Frontend SYDY (2022- até o momento)
@@ -82,6 +86,16 @@ export function Experience() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+      </div>
+
+      <div className="flex justify-center">
+        <a
+          href="/curriculo.pdf"
+          target="_blank"
+          className=" flex justify-center items-center rounded-md h-10 w-40 transition ease-in-out delay-50 bg-white hover:bg-slate-200 "
+        >
+          Baixar Currículo
+        </a>
       </div>
     </>
   );
