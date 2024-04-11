@@ -17,7 +17,8 @@ module.exports = {
       },
     },
     screens: {
-      "mobile": { "max": "600px" }
+      "mobile": { "max": "600px" },
+      "notebook": { "min": "600px", "max": "1280px" }
     },
     extend: {
       gridTemplateRows: {
