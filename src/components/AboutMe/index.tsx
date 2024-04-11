@@ -163,11 +163,11 @@ export function AboutMe() {
 
             <li className="text-white text-lg flex items-center gap-2 mobile:text-base">
               <Signpost size={32} />
-              Experiencia em Desenvolvimento Front-end: 3 ano(s)
+              Experiência em Desenvolvimento Front-end: 3 ano(s)
             </li>
             <li className="text-white text-lg flex items-center gap-2 mobile:text-base">
               <Signpost size={32} />
-              Experiencia em Desenvolvimento Back-end: 1 ano
+              Experiência em Desenvolvimento Back-end: 1 ano
             </li>
           </ol>
         </div>
