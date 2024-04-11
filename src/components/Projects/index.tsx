@@ -46,7 +46,7 @@ export function Projects() {
               </a>
             </Button>
 
-            <Button className="p-0">
+            <Button className="p-0" disabled>
               <a
                 target="_blank"
                 rel="noreferrer"
