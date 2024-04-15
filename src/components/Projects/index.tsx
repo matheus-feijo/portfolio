@@ -39,7 +39,7 @@ export function Projects() {
                 rel="noreferrer"
                 href="https://github.com/matheus-feijo/rick-and-morty-app"
                 target="_blank"
-                className="flex items-center justify-center gap-1 w-24 h-full"
+                className="flex items-center justify-center gap-1 w-24 h-full transition ease-in-out delay-100 hover:text-vermelhoPrincipal"
               >
                 <GithubLogo size={16} />
                 Github
@@ -51,7 +51,7 @@ export function Projects() {
                 target="_blank"
                 rel="noreferrer"
                 href="https://rick-and-morty-app.matheus-feijo.vercel.app/"
-                className="flex items-center justify-center gap-1 w-24 h-full"
+                className="flex items-center justify-center gap-1 w-24 h-full transition ease-in-out delay-100 hover:text-vermelhoPrincipal"
               >
                 <Globe size={16} />
                 Site

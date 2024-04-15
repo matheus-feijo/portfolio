@@ -94,6 +94,7 @@ export function Experience() {
         <a
           href="/curriculo.pdf"
           target="_blank"
+          rel="noreferrer"
           className=" flex justify-center items-center rounded-md h-10 w-40 transition ease-in-out delay-50 bg-white hover:bg-slate-200 "
         >
           Baixar Currículo
