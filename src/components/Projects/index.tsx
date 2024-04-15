@@ -19,12 +19,9 @@ export function Projects() {
       </h1>
 
       <div className="p-10 flex gap-5 flex-wrap justify-center">
-        <Card className="w-96 h-96 ">
+        <Card className="w-72 h-[22rem]">
           <CardHeader>
             <CardTitle>Rick and Morty</CardTitle>
-            <CardDescription className="text-white">
-              Criado para aprimorar conhecimento em consumo de APIs
-            </CardDescription>
           </CardHeader>
           <CardContent className="flex justify-center">
             <img

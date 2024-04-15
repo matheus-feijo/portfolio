@@ -21,6 +21,13 @@ export function AboutMe() {
     react: <ReactIcon />,
   };
 
+  const descricoes = {
+    formacao: "Formado em Ciência da Computação na UFMT",
+    ingles: " Ingles Intermediário/Fluente",
+    frontend: "Experiência em Desenvolvimento Front-end: 3 ano(s)",
+    backend: "Experiência em Desenvolvimento Back-end: 1 ano",
+  };
+
   return (
     <>
       <div className="w-screen pl-24 pr-24 pt-20 flex gap-2 justify-center items-start flex-wrap mobile:pl-0 mobile:pr-0 mobile:pt-1 ">
@@ -60,23 +67,18 @@ export function AboutMe() {
           />
 
           <ol className="flex flex-col gap-2 mobile:pl-5 mobile:pr-5">
-            <li className="text-white text-lg flex items-center gap-2 mobile:text-base ">
-              <Signpost size={32} /> Formado em Ciência da Computação na UFMT
-            </li>
-
-            <li className="text-white text-lg flex items-center gap-2 mobile:text-base ">
-              <Signpost size={32} />
-              Ingles Intermediário/Fluente
-            </li>
-
-            <li className="text-white text-lg flex items-center gap-2 mobile:text-base ">
-              <Signpost size={32} />
-              Experiência em Desenvolvimento Front-end: 3 ano(s)
-            </li>
-            <li className="text-white text-lg flex items-center gap-2 mobile:text-base ">
-              <Signpost size={32} />
-              Experiência em Desenvolvimento Back-end: 1 ano
-            </li>
+            {Object.entries(descricoes).map((descricao) => {
+              return (
+                <li
+                  key={descricao[0]}
+                  id={descricao[0]}
+                  className="text-white text-lg flex items-center gap-2 mobile:text-base "
+                >
+                  <Signpost size={32} />
+                  {descricao[1]}
+                </li>
+              );
+            })}
           </ol>
         </div>
       </div>

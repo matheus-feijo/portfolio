@@ -72,7 +72,7 @@ export function TheHeader() {
               <MenubarTrigger>
                 <List size={32} color="#FFFF" />
               </MenubarTrigger>
-              <MenubarContent>
+              <MenubarContent align="center">
                 <MenubarItem
                   onClick={() => navigate("/")}
                   className={`text-${menuSelected === "/" && "[#FF4A57]"}`}
