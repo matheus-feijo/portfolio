@@ -14,13 +14,13 @@ export function Experience() {
       id: "exp-1",
       title: "Desenvolvedor de Software Policia Militar (2021-2023)",
       description:
-        " Nesse estágio, foi desenvolvido um aplicativo web no qual foi utilizado no frontend o ReactJs, juntamente com bibliotecas como materialUi, styled-components, entre outros. Vale ressaltar que foi utilizado para gerenciamento de estados o ContextAPI, porém, quando o projeto atingiu um tamanho consideravelmente grande, foi alterado para o Zustand. Para o backend, foi utilizado o NodeJs com o ORM knex para facilitar as interações com o banco de dados. Esse aplicativo já se encontra em produção",
+        "Participei do desenvolvimento de um aplicativo para controle de escalas de serviço na Polícia Militar do Estado de Mato Grosso. Nesse projeto, trabalhei em equipe com outras quatro pessoas, seguindo a metodologia ágil SCRUM. Minhas responsabilidades incluíam a criação de módulos completos, abrangendo tanto o desenvolvimento frontend quanto backend, além de realizar a estruturação das tabelas necessárias no banco de dados.",
     },
     {
       id: "exp-2",
       title: "Desenvolvedor Frontend SYDY (2022- até o momento)",
       description:
-        "Na Sydy, participei de 2 projetos. Todos eles PWAs utilizando ReactJs com Typescript empregando Redux para gerenciamento de estado global. Sendo o primeiro projeto, um web app para fiscalizações de propriedades no interior do Estado (Mato Grosso). Porém, havia o problema de que a maioria das localidades não haviam acesso à internet, portanto, era necessário um aplicativo com funcionamento offline-first, no qual fui responsável por escolher as ferramentas utilizadas bem como desenvolver as funcionalidades requisitadas dentro de cada sprint. \n No Segundo projeto, similar ao anterior, foi uma PWA, porém, para fiscalização de transito de veículos agrícolas. Neste, houve uma maior complexidade quanto ao dinamismo do formulário, pois no levantamento de requisitos, haviam diversos fluxos a serem seguidos, no qual eram muito desgastantes de serem elaborados, portanto, a maior dificuldade foi planejar esse dinamismo.",
+        "Durante esse período, tive a oportunidade de liderar dois projetos como único desenvolvedor frontend. Em ambos os casos, fui encarregado de selecionar as tecnologias adequadas e estruturar os projetos do zero. O primeiro projeto consistia em um aplicativo web para a realização de fiscalizações em propriedades rurais no interior do Estado de Mato Grosso. Uma consideração importante foi o fato de que muitas dessas localidades não possuíam acesso à internet, o que exigiu a implementação de uma Progressive Web App (PWA) para garantir a acessibilidade. O sucesso desse aplicativo foi evidente, pois os responsáveis pelas fiscalizações solicitaram a inclusão de mais seis tipos de formulários adicionais, demonstrando sua utilidade e relevância. No segundo projeto, enfrentamos um desafio semelhante. Desenvolvemos outro aplicativo web com foco na fiscalização do trânsito de veículos agrícolas.",
     },
   ];
 
