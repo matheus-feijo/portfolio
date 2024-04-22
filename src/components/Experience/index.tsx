@@ -72,7 +72,7 @@ export function Experience() {
         </Accordion>
       </div>
 
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <a
           href="/curriculo.pdf"
           target="_blank"
@@ -81,7 +81,7 @@ export function Experience() {
         >
           Baixar Currículo
         </a>
-      </div>
+      </div> */}
     </>
   );
 }
