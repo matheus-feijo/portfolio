@@ -12,7 +12,8 @@ export function Experience() {
   const experiencias = [
     {
       id: "exp-1",
-      title: "Software Developer at Militar Police(2021-2023)", // "Desenvolvedor de Software Policia Militar (2021-2023)",
+      title:
+        "Software Developer at Military Police of Mato Grosso,Brazil(2021-2023)", // "Desenvolvedor de Software Policia Militar (2021-2023)",
       description:
         "I participated in the development of an application to control duty rosters at the Military Police of the State of Mato Grosso. On this project, I worked in a team with four other people, following the SCRUM agile methodology. My responsibilities included creating complete modules, covering both frontend and backend development, in addition to structuring the necessary tables in the database.",
     },
