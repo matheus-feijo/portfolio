@@ -23,7 +23,7 @@ export function TheHeader() {
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
             onClick={() => navigate("/")}
           >
-            Inicio
+            Home
           </button>
           <button
             className={`text-${
@@ -31,7 +31,7 @@ export function TheHeader() {
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
             onClick={() => navigate("/projetos")}
           >
-            Projetos
+            Projects
           </button>
           <button
             className={`text-${
@@ -39,7 +39,7 @@ export function TheHeader() {
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
             onClick={() => navigate("/experiencias")}
           >
-            Experiências
+            Experience
           </button>
 
           <div className="flex gap-5 items-center">
@@ -77,7 +77,7 @@ export function TheHeader() {
                   onClick={() => navigate("/")}
                   className={`text-${menuSelected === "/" && "[#FF4A57]"}`}
                 >
-                  Inicio
+                  Home
                 </MenubarItem>
                 <MenubarItem
                   onClick={() => navigate("/experiencias")}
@@ -87,7 +87,7 @@ export function TheHeader() {
                     "[#FF4A57]"
                   }`}
                 >
-                  Experiências
+                  Experience
                 </MenubarItem>
                 <MenubarItem
                   onClick={() => navigate("/projetos")}
@@ -95,7 +95,7 @@ export function TheHeader() {
                     menuSelected === "/projetos" && "[#FF4A57]"
                   }`}
                 >
-                  Projetos
+                  Projects
                 </MenubarItem>
 
                 <MenubarItem>

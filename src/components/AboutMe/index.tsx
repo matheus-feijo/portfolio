@@ -22,10 +22,10 @@ export function AboutMe() {
   };
 
   const descricoes = {
-    formacao: "Formado em Ciência da Computação na UFMT",
-    ingles: " Ingles Intermediário/Fluente",
-    frontend: "Experiência em Desenvolvimento Front-end: 3 ano(s)",
-    backend: "Experiência em Desenvolvimento Back-end: 1 ano",
+    formacao: "Graduate in Computer Science at UFMT-Brazil",
+    ingles: " English Level: Intermediate",
+    frontend: "Experience in frontend development: 4 years ",
+    backend: "Experience in backend development: 1 year",
   };
 
   return (
@@ -39,12 +39,12 @@ export function AboutMe() {
           </div>
 
           <p className="text-white text-xl text-justify animate-more-details mobile:text-lg">
-            Desenvolvedor de Sotware.
+            Software Developer.
           </p>
 
           <div className="flex flex-col gap-5 justify-center items-center animate-habilidades">
             <h1 className="text-vermelhoPrincipal text-4xl mobile:text-2xl">
-              Habilidades
+              Skills
             </h1>
 
             <li className="flex gap-5 flex-wrap p-5">
@@ -63,7 +63,7 @@ export function AboutMe() {
           <img
             className="w-4/5 h-4/5 max-w-[18rem] max-h-72 rounded-full mobile:w-32 mobile:h-32 "
             src={foto}
-            alt="Foto do deselvovedor referenciado no site"
+            alt="this is a img of the developer"
           />
 
           <ol className="flex flex-col gap-2 mobile:pl-5 mobile:pr-5">
@@ -81,15 +81,6 @@ export function AboutMe() {
             })}
           </ol>
         </div>
-      </div>
-
-      <div
-        id="tooltip-default"
-        role="tooltip"
-        className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-      >
-        Tooltip content
-        <div className="tooltip-arrow" data-popper-arrow></div>
       </div>
     </>
   );
