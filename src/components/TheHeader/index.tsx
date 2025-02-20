@@ -29,7 +29,7 @@ export function TheHeader() {
             className={`text-${
               menuSelected === "/projetos" ? "[#FF4A57]" : "white"
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
-            onClick={() => navigate("/projetos")}
+            onClick={() => navigate("/projects")}
           >
             Projects
           </button>
@@ -37,7 +37,7 @@ export function TheHeader() {
             className={`text-${
               menuSelected === "/experiencias" ? "[#FF4A57]" : "white"
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
-            onClick={() => navigate("/experiencias")}
+            onClick={() => navigate("/experiences")}
           >
             Experience
           </button>
