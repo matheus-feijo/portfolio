@@ -82,7 +82,7 @@ export function TheHeader() {
                 <MenubarItem
                   onClick={() => navigate("/experiencias")}
                   className={`text-${
-                    menuSelected === "/experiencias" &&
+                    menuSelected === "/experiences" &&
                     "[#FF4A57]" &&
                     "[#FF4A57]"
                   }`}
@@ -92,7 +92,7 @@ export function TheHeader() {
                 <MenubarItem
                   onClick={() => navigate("/projetos")}
                   className={`text-${
-                    menuSelected === "/projetos" && "[#FF4A57]"
+                    menuSelected === "/projects" && "[#FF4A57]"
                   }`}
                 >
                   Projects

@@ -19,7 +19,7 @@ export function Experience() {
     },
     {
       id: "exp-2",
-      title: "Frontend developer at SYDY (2022- até o momento)",
+      title: "Frontend developer at SYDY (2022- until now)",
       description:
         "During this period, I had the opportunity to lead two projects as the sole frontend developer. In both cases, I was tasked with selecting the appropriate technologies and structuring the projects from scratch. The first project consisted of a web application for carrying out inspections on rural properties in the interior of the State of Mato Grosso. An important consideration was the fact that many of these locations did not have internet access, which required the implementation of a Progressive Web App (PWA) to ensure accessibility. The success of this application was evident, as those responsible for inspections requested the inclusion of six additional types of forms, demonstrating their usefulness and relevance. In the second project, we faced a similar challenge. We developed another web application focused on monitoring the traffic of agricultural vehicles.",
     },
