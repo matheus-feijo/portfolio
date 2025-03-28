@@ -27,7 +27,7 @@ export function TheHeader() {
           </button>
           <button
             className={`text-${
-              menuSelected === "/projetos" ? "[#FF4A57]" : "white"
+              menuSelected === "/projects" ? "[#FF4A57]" : "white"
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
             onClick={() => navigate("/projects")}
           >
@@ -35,7 +35,7 @@ export function TheHeader() {
           </button>
           <button
             className={`text-${
-              menuSelected === "/experiencias" ? "[#FF4A57]" : "white"
+              menuSelected === "/experiences" ? "[#FF4A57]" : "white"
             } text-xl transition ease-in-out delay-100 hover:text-[#FF4A57]`}
             onClick={() => navigate("/experiences")}
           >
@@ -80,7 +80,7 @@ export function TheHeader() {
                   Home
                 </MenubarItem>
                 <MenubarItem
-                  onClick={() => navigate("/experiencias")}
+                  onClick={() => navigate("/experiences")}
                   className={`text-${
                     menuSelected === "/experiences" &&
                     "[#FF4A57]" &&
@@ -90,7 +90,7 @@ export function TheHeader() {
                   Experience
                 </MenubarItem>
                 <MenubarItem
-                  onClick={() => navigate("/projetos")}
+                  onClick={() => navigate("/projects")}
                   className={`text-${
                     menuSelected === "/projects" && "[#FF4A57]"
                   }`}
