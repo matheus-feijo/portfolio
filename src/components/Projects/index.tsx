@@ -1,4 +1,4 @@
-import RickAndMortyCapa from "@/assets/rick-and-morty-capa.png";
+import RickAndMortyCapa from "@/assets/capa-rick-and-morty.jpg";
 import { Button } from "@/components/ui/button";
 import {
   Card,
