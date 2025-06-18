@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Briefcase, Building } from "@phosphor-icons/react";
+import { Briefcase } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 
 export function Experience() {
@@ -44,7 +44,11 @@ export function Experience() {
                     : "text-white"
                 } px-2 transition-colors duration-200 hover:text-vermelhoPrincipal`}
               >
-                <Building weight="duotone" className="min-w-[24px]" size={24} />
+                <Briefcase
+                  weight="duotone"
+                  className="min-w-[24px]"
+                  size={24}
+                />
                 <span>
                   Desenvolvedor de Software - Polícia Militar (2021-2023)
                 </span>

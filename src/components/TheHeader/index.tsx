@@ -97,14 +97,14 @@ export function TheHeader() {
               >
                 Inicio
               </MenubarItem>
-              <MenubarItem
+              {/* <MenubarItem
                 onClick={() => navigate("/projetos")}
                 className={`cursor-pointer px-4 py-2 text-base hover:bg-white/10 ${
                   isActive("/projetos") ? "text-[#FF4A57]" : "text-white"
                 }`}
               >
                 Projetos
-              </MenubarItem>
+              </MenubarItem> */}
               <MenubarItem
                 onClick={() => navigate("/experiencias")}
                 className={`cursor-pointer px-4 py-2 text-base hover:bg-white/10 ${
