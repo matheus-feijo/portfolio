@@ -10,8 +10,13 @@ import {
 } from "@/components/ui/card";
 import { Globe } from "@phosphor-icons/react";
 import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
+import { useEffect } from "react";
 
 export function Projects() {
+  useEffect(() => {
+    document.title = "Projetos - Matheus Feijó";
+  }, []);
+
   return (
     <>
       <h1 className="pt-10 pb-10 text-center text-5xl text-white mobile:text-4xl">

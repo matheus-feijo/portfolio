@@ -1,7 +1,12 @@
 import foto from "@/assets/foto-perfil.jpg";
 import { Signpost } from "@phosphor-icons/react";
+import { useEffect } from "react";
 
 export function AboutMe() {
+  useEffect(() => {
+    document.title = "Sobre Mim - Matheus Feijó";
+  }, []);
+
   return (
     <>
       <div className="flex w-screen flex-wrap items-start justify-center gap-2 pl-24 pr-24 pt-24 mobile:pl-0 mobile:pr-0 mobile:pt-1">

@@ -4,10 +4,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Experience() {
   const [contentSelected, setContentSelected] = useState("");
+
+  useEffect(() => {
+    document.title = "Experiências - Matheus Feijó";
+  }, []);
 
   return (
     <>
