@@ -1,22 +1,22 @@
-import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../components-ui/ui/accordion";
+} from "@/components/ui/accordion";
+import { useState } from "react";
 
 export function Experience() {
   const [contentSelected, setContentSelected] = useState("");
 
   return (
     <>
-      <h1 className="text-white text-5xl text-center pt-10 mobile:text-4xl">
+      <h1 className="pt-10 text-center text-5xl text-white mobile:text-4xl">
         Experiências
       </h1>
 
-      <div className="flex justify-center items-center">
-        <Accordion type="single" collapsible className="p-10 w-4/5 ">
+      <div className="flex items-center justify-center">
+        <Accordion type="single" collapsible className="w-4/5 p-10">
           <AccordionItem
             value="item-1"
             onClick={() => {
@@ -37,7 +37,7 @@ export function Experience() {
             >
               Desenvolvedor de Software Policia Militar (2021-2023)
             </AccordionTrigger>
-            <AccordionContent className="text-white text-lg text-justify mobile:text-base mobile:text-center">
+            <AccordionContent className="text-justify text-lg text-white mobile:text-center mobile:text-base">
               Nesse estágio foi desenvolvido um aplicativo web no qual foi
               utilizado no frontend o ReactJs juntamente com bibliotecas como
               materialUi, styled-components, etc, vale ressaltar que foi
@@ -69,7 +69,7 @@ export function Experience() {
             >
               Desenvolvedor Frontend SYDY (2022- até o momento)
             </AccordionTrigger>
-            <AccordionContent className="text-white text-lg text-justify mobile:text-base mobile:text-center ">
+            <AccordionContent className="text-justify text-lg text-white mobile:text-center mobile:text-base">
               Na Sydy participei de 2 projetos todos eles PWAs utilizando
               ReactJs com Typescript utilizando Redux para gerenciamento de
               estado global, Sendo o primeiro projeto um web app para
@@ -94,7 +94,7 @@ export function Experience() {
         <a
           href="/curriculo.pdf"
           target="_blank"
-          className=" flex justify-center items-center rounded-md h-10 w-40 transition ease-in-out delay-50 bg-white hover:bg-slate-200 "
+          className="delay-50 flex h-10 w-40 items-center justify-center rounded-md bg-white transition ease-in-out hover:bg-slate-200"
         >
           Baixar Currículo
         </a>

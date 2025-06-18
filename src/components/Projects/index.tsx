@@ -1,3 +1,5 @@
+import RickAndMortyCapa from "@/assets/rick-and-morty-capa.png";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -5,21 +7,19 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../../components-ui/ui/card";
-import rickAndMortyCapa from "../../assets/capa-rick-and-morty.jpg";
-import { Button } from "../../components-ui/ui/button";
-import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
+} from "@/components/ui/card";
 import { Globe } from "@phosphor-icons/react";
+import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
 
 export function Projects() {
   return (
     <>
-      <h1 className="text-center text-white text-5xl pt-10 pb-10 mobile:text-4xl">
+      <h1 className="pt-10 pb-10 text-center text-5xl text-white mobile:text-4xl">
         Projetos
       </h1>
 
-      <div className="p-10 flex gap-5 flex-wrap justify-center">
-        <Card className="w-96 h-96 ">
+      <div className="flex flex-wrap justify-center gap-5 p-10">
+        <Card className="h-96 w-96">
           <CardHeader>
             <CardTitle>Rick and Morty</CardTitle>
             <CardDescription className="text-white">
@@ -28,8 +28,8 @@ export function Projects() {
           </CardHeader>
           <CardContent className="flex justify-center">
             <img
-              className="w-48 h-48"
-              src={rickAndMortyCapa}
+              className="h-48 w-48"
+              src={RickAndMortyCapa}
               alt="imagem ilustrativa de Rick and Morty"
             />
           </CardContent>
@@ -39,7 +39,7 @@ export function Projects() {
                 rel="noreferrer"
                 href="https://github.com/matheus-feijo/rick-and-morty-app"
                 target="_blank"
-                className="flex items-center justify-center gap-1 w-24 h-full"
+                className="flex h-full w-24 items-center justify-center gap-1"
               >
                 <GithubLogo size={16} />
                 Github
@@ -51,7 +51,7 @@ export function Projects() {
                 target="_blank"
                 rel="noreferrer"
                 href="https://rick-and-morty-app.matheus-feijo.vercel.app/"
-                className="flex items-center justify-center gap-1 w-24 h-full"
+                className="flex h-full w-24 items-center justify-center gap-1"
               >
                 <Globe size={16} />
                 Site
