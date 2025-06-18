@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { TheHeader } from "../components/TheHeader";
+import { AboutMe } from "../components/AboutMe";
 import { Experience } from "../components/Experience";
 import { Projects } from "../components/Projects";
-import { AboutMe } from "../components/AboutMe";
+import { TheHeader } from "../components/TheHeader";
 
 export function Routers() {
   return (
