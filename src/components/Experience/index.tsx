@@ -4,105 +4,135 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Briefcase, Building } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 
 export function Experience() {
-  const [contentSelected, setContentSelected] = useState("");
+  const [activeItem, setActiveItem] = useState<string | null>(null);
 
   useEffect(() => {
     document.title = "Experiências - Matheus Feijó";
   }, []);
 
+  const handleItemClick = (itemValue: string) => {
+    if (activeItem === itemValue) {
+      setActiveItem(null);
+      return;
+    }
+
+    setActiveItem(itemValue);
+  };
+
   return (
-    <>
-      <h1 className="pt-10 text-center text-5xl text-white mobile:text-4xl">
-        Experiências
-      </h1>
+    <div className="sm:px-6 lg:px-8 min-h-screen bg-gradient-to-b from-gray-900 to-black py-16 px-4">
+      <div className="mx-auto max-w-5xl">
+        <h1 className="mb-12 bg-gradient-to-r from-vermelhoPrincipal to-orange-400 bg-clip-text text-center text-5xl font-bold text-transparent">
+          Experiências Profissionais
+        </h1>
 
-      <div className="flex items-center justify-center">
-        <Accordion type="single" collapsible className="w-4/5 p-10">
-          <AccordionItem
-            value="item-1"
-            onClick={() => {
-              if (contentSelected === "item-1") {
-                setContentSelected("");
-                return;
-              }
-
-              setContentSelected("item-1");
-            }}
-          >
-            <AccordionTrigger
-              className={` ${
-                contentSelected === "item-1"
-                  ? "text-vermelhoPrincipal"
-                  : "text-white"
-              } text-xl mobile:text-lg`}
+        <div className="mb-12 rounded-2xl bg-gray-800/30 p-8 shadow-xl backdrop-blur-sm">
+          <Accordion type="single" collapsible className="space-y-6">
+            <AccordionItem
+              value="policia-militar"
+              className="overflow-hidden rounded-xl border-b-0 bg-gray-800/50 p-4 backdrop-blur-sm transition-all duration-200 hover:shadow-md hover:shadow-vermelhoPrincipal/20"
             >
-              Desenvolvedor de Software Policia Militar (2021-2023)
-            </AccordionTrigger>
-            <AccordionContent className="text-justify text-lg text-white mobile:text-center mobile:text-base">
-              Nesse estágio foi desenvolvido um aplicativo web no qual foi
-              utilizado no frontend o ReactJs juntamente com bibliotecas como
-              materialUi, styled-components, etc, vale ressaltar que foi
-              utilizado para gerenciamento de estados o ContextAPI porém quando
-              o projeto atingiu um tamanho consideravelmente grande foi alterado
-              para o Zustand. Para o backend foi utilizado o NodeJs com o ORM
-              knex para facilitar as interações com o banco de dados. Esse
-              aplicativo já se encontra em produção
-            </AccordionContent>
-          </AccordionItem>
+              <AccordionTrigger
+                onClick={() => handleItemClick("item-1")}
+                className={`flex items-center gap-2 text-xl font-semibold ${
+                  activeItem === "item-1"
+                    ? "text-vermelhoPrincipal"
+                    : "text-white"
+                } px-2 transition-colors duration-200 hover:text-vermelhoPrincipal`}
+              >
+                <Building weight="duotone" className="min-w-[24px]" size={24} />
+                <span>
+                  Desenvolvedor de Software - Polícia Militar (2021-2023)
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="px-2 py-4 text-lg leading-relaxed text-gray-300">
+                <p>
+                  Desenvolvi um aplicativo web utilizando ReactJs no frontend
+                  com MaterialUI e styled-components. Inicialmente usei
+                  ContextAPI para gerenciamento de estado, mas com o crescimento
+                  do projeto, migrei para Zustand. O backend foi construído com
+                  NodeJs e Knex ORM para facilitar interações com o banco de
+                  dados. O aplicativo já está em produção.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem
-            value="item-2"
-            onClick={() => {
-              if (contentSelected === "item-2") {
-                setContentSelected("");
-                return;
-              }
-
-              setContentSelected("item-2");
-            }}
-          >
-            <AccordionTrigger
-              className={` ${
-                contentSelected === "item-2"
-                  ? "text-vermelhoPrincipal"
-                  : "text-white"
-              } text-xl mobile:text-lg`}
+            <AccordionItem
+              value="sydy"
+              className="overflow-hidden rounded-xl border-b-0 bg-gray-800/50 p-4 backdrop-blur-sm transition-all duration-200 hover:shadow-md hover:shadow-vermelhoPrincipal/20"
             >
-              Desenvolvedor Frontend SYDY (2022- até o momento)
-            </AccordionTrigger>
-            <AccordionContent className="text-justify text-lg text-white mobile:text-center mobile:text-base">
-              Na Sydy participei de 2 projetos todos eles PWAs utilizando
-              ReactJs com Typescript utilizando Redux para gerenciamento de
-              estado global, Sendo o primeiro projeto um web app para
-              fiscalizações de propriedades no interior do Estado (Mato Grosso).
-              Porém eles tinham um problema que a maioria dessas localidades não
-              possuiam internet, então queriam um aplicativo com funcionamento
-              offline-first, no qual fui responsavel por escoher as ferramentas
-              utilizadas bem como desenvolver as funcionalidades requisitadas
-              dentro de cada sprint.
-              <br /> No Segundo projeto, era similar ao anterior, sendo uma PWA
-              porém para fiscalização de transito de veiculos agricolas. Nesse
-              houve uma maior complexidade quanto a dinamismo do formulario,
-              pois no levantamento de requisitos possuia diversos fluxos a serem
-              seguidos, no qual eram muito desgastantes de se fazer, então a
-              maior dificuldade foi planejar esse dinamismo.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </div>
+              <AccordionTrigger
+                onClick={() => {
+                  console.log("Item 2 clicked");
+                  handleItemClick("item-2");
+                }}
+                className={`flex items-center gap-2 text-xl font-semibold ${
+                  activeItem === "item-2"
+                    ? "text-vermelhoPrincipal"
+                    : "text-white"
+                } px-2 transition-colors duration-200 hover:text-vermelhoPrincipal`}
+              >
+                <Briefcase
+                  weight="duotone"
+                  className="min-w-[24px]"
+                  size={24}
+                />
+                <span>Desenvolvedor Frontend - SYDY (2022 - Atual)</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-2 py-4 text-lg leading-relaxed text-gray-300">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="mb-2 font-medium text-vermelhoPrincipal">
+                      Projeto 1: PWA de Fiscalização de Propriedades
+                    </h3>
+                    <p>
+                      Desenvolvi uma aplicação com ReactJs + TypeScript (PWA)
+                      para uso em notebooks e dispositivos móveis. O objetivo
+                      era automatizar a fiscalização de propriedades em Mato
+                      Grosso, incluindo regiões sem internet. Implementei uma
+                      solução offline-first com Redux + redux-offline +
+                      redux-persist para sincronização automática quando
+                      detectada conexão. Trabalhei sozinho no frontend,
+                      integrando com API desenvolvida pela contratante. Em
+                      produção há 3 anos.
+                    </p>
+                  </div>
 
-      <div className="flex justify-center">
-        <a
-          href="/curriculo.pdf"
-          target="_blank"
-          className="delay-50 flex h-10 w-40 items-center justify-center rounded-md bg-white transition ease-in-out hover:bg-slate-200"
-        >
-          Baixar Currículo
-        </a>
+                  <div>
+                    <h3 className="mb-2 font-medium text-vermelhoPrincipal">
+                      Projeto 2: PWA de Fiscalização de Transporte
+                    </h3>
+                    <p>
+                      Similar ao Projeto 1, mas focado em fiscalização de
+                      veículos de transporte de cargas animais/vegetais. A
+                      complexidade estava nos múltiplos fluxos de negócio.
+                      Repliquei e adaptei a arquitetura do projeto anterior,
+                      também trabalhando sozinho na implementação.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="mb-2 font-medium text-vermelhoPrincipal">
+                      Projeto 3: E-commerce de Sementes
+                    </h3>
+                    <p>
+                      Construí um aplicativo para venda de sementes utilizando
+                      ReactJs + TypeScript + React Query + TailwindCSS. Para
+                      gerenciamento de estados utilizei URL state, evitando a
+                      necessidade de gerenciadores como ContextAPI, Redux ou
+                      Zustand.
+                    </p>
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

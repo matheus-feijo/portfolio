@@ -122,7 +122,8 @@ export function AboutMe() {
                   <p className="text-gray-400">3 anos de experiência</p>
                   <p className="mt-1 text-sm text-gray-500">
                     React, Vue, NextJS, TypeScript, PWA, TailwindCSS, Styled
-                    Components, Antd, Redux, Recoil, Zustand.
+                    Components, Antd, Redux, Recoil, Zustand, PlaywrightTest,
+                    Vitest.
                   </p>
                 </div>
               </li>
@@ -137,7 +138,8 @@ export function AboutMe() {
                   <p className="text-gray-400">1 ano de experiência</p>
                   <p className="mt-1 text-sm text-gray-500">
                     Node.js, Typescript, Express, Fastify, PrismaORM, NestJs,
-                    Postgres, Docker, Sequelize, Knex, Python, MySQL, Keycloak
+                    Postgres, Docker, Sequelize, Knex, Python, MySQL, Keycloak,
+                    Vitest.
                   </p>
                 </div>
               </li>
