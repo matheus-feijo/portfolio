@@ -24,7 +24,7 @@ export function Experience() {
   };
 
   return (
-    <div className="sm:px-6 lg:px-8 min-h-screen bg-gradient-to-b from-gray-900 to-black py-16 px-4">
+    <div className="sm:px-6 lg:px-8 py-16 px-4">
       <div className="mx-auto max-w-5xl">
         <h1 className="mb-12 bg-gradient-to-r from-vermelhoPrincipal to-orange-400 bg-clip-text text-center text-5xl font-bold text-transparent">
           Experiências Profissionais

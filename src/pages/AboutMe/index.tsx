@@ -32,7 +32,7 @@ export function AboutMe() {
   }, []);
 
   return (
-    <div className="sm:px-6 lg:px-8 min-h-screen bg-gradient-to-b from-gray-900 to-black py-16 px-4">
+    <div className="sm:px-6 lg:px-8 min-h-screen py-16 px-4">
       <div className="mx-auto max-w-6xl">
         <div className="md:flex-row mb-20 flex flex-col items-center justify-between gap-12">
           <div className="relative">

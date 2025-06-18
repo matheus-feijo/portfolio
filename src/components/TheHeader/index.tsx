@@ -29,7 +29,7 @@ export function TheHeader() {
           >
             Inicio
           </button>
-          <button
+          {/* <button
             className={`relative text-lg font-medium ${
               isActive("/projetos") ? "text-[#FF4A57]" : "text-white"
             } transition-colors duration-200 after:absolute after:bottom-[-4px] after:left-0 after:h-[3px] after:w-0 after:bg-[#FF4A57] after:transition-all after:duration-300 hover:text-[#FF4A57] hover:after:w-full ${
@@ -38,7 +38,7 @@ export function TheHeader() {
             onClick={() => navigate("/projetos")}
           >
             Projetos
-          </button>
+          </button> */}
           <button
             className={`relative text-lg font-medium ${
               isActive("/experiencias") ? "text-[#FF4A57]" : "text-white"
