@@ -27,7 +27,7 @@ export function TheHeader() {
             }`}
             onClick={() => navigate("/")}
           >
-            Home
+            Inicio
           </button>
           {/* <button
             className={`relative text-lg font-medium ${
@@ -47,7 +47,7 @@ export function TheHeader() {
             }`}
             onClick={() => navigate("/experiencias")}
           >
-            Experience
+            Experiencias
           </button>
         </div>
 
