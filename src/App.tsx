@@ -1,4 +1,3 @@
-import "./globalStyle.css";
 import { Routers } from "./routes";
 
 function App() {
