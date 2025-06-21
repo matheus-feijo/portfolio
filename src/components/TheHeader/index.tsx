@@ -1,4 +1,8 @@
-import { GithubLogo, LinkedinLogo, List } from "@phosphor-icons/react";
+import {
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+  ListIcon,
+} from "@phosphor-icons/react";
 
 import {
   Menubar,
@@ -47,7 +51,7 @@ export function TheHeader() {
             }`}
             onClick={() => navigate("/experiencias")}
           >
-            Experiencias
+            Experiências
           </button>
         </div>
 
@@ -59,7 +63,7 @@ export function TheHeader() {
             className="rounded-full p-2 transition-all duration-200 hover:bg-white/10"
             aria-label="LinkedIn Profile"
           >
-            <LinkedinLogo
+            <LinkedinLogoIcon
               size={28}
               weight="fill"
               className="text-white transition-colors duration-200 hover:text-[#FF4A57]"
@@ -72,7 +76,7 @@ export function TheHeader() {
             className="rounded-full p-2 transition-all duration-200 hover:bg-white/10"
             aria-label="GitHub Profile"
           >
-            <GithubLogo
+            <GithubLogoIcon
               size={28}
               weight="fill"
               className="text-white transition-colors duration-200 hover:text-[#FF4A57]"
@@ -86,7 +90,7 @@ export function TheHeader() {
         <Menubar className="border-none bg-transparent p-0">
           <MenubarMenu>
             <MenubarTrigger className="data-[state=open]:bg-white/10 cursor-pointer rounded-lg bg-transparent p-2 hover:bg-white/10 focus:bg-white/10">
-              <List size={28} className="text-white" />
+              <ListIcon size={28} className="text-white" />
             </MenubarTrigger>
             <MenubarContent className="rounded-md border-[#282a38] bg-[#181a28] shadow-xl">
               <MenubarItem
@@ -97,14 +101,7 @@ export function TheHeader() {
               >
                 Inicio
               </MenubarItem>
-              {/* <MenubarItem
-                onClick={() => navigate("/projetos")}
-                className={`cursor-pointer px-4 py-2 text-base hover:bg-white/10 ${
-                  isActive("/projetos") ? "text-[#FF4A57]" : "text-white"
-                }`}
-              >
-                Projetos
-              </MenubarItem> */}
+
               <MenubarItem
                 onClick={() => navigate("/experiencias")}
                 className={`cursor-pointer px-4 py-2 text-base hover:bg-white/10 ${
@@ -121,7 +118,7 @@ export function TheHeader() {
                   target="_blank"
                   className="flex items-center gap-2 text-white hover:text-black"
                 >
-                  <LinkedinLogo size={18} weight="fill" /> Linkedin
+                  <LinkedinLogoIcon size={18} weight="fill" /> Linkedin
                 </a>
               </MenubarItem>
               <MenubarItem className="px-4 py-2 hover:bg-white/10">
@@ -131,7 +128,7 @@ export function TheHeader() {
                   target="_blank"
                   className="flex items-center gap-2 text-white hover:text-black"
                 >
-                  <GithubLogo size={18} weight="fill" /> Github
+                  <GithubLogoIcon size={18} weight="fill" /> Github
                 </a>
               </MenubarItem>
             </MenubarContent>

@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Briefcase } from "@phosphor-icons/react";
+import { BriefcaseIcon } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 
 export function Experience() {
@@ -44,7 +44,7 @@ export function Experience() {
                     : "text-white"
                 } px-2 transition-colors duration-200 hover:text-vermelhoPrincipal`}
               >
-                <Briefcase
+                <BriefcaseIcon
                   weight="duotone"
                   className="min-w-[24px]"
                   size={24}
@@ -80,7 +80,7 @@ export function Experience() {
                     : "text-white"
                 } px-2 transition-colors duration-200 hover:text-vermelhoPrincipal`}
               >
-                <Briefcase
+                <BriefcaseIcon
                   weight="duotone"
                   className="min-w-[24px]"
                   size={24}

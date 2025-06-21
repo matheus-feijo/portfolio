@@ -1,6 +1,7 @@
 import foto from "@/assets/perfil.jpg";
-import { DockerIcon } from "@/icons/docker";
+import { DockerIcon } from "@/icons/Docker";
 import { JavascriptIcon } from "@/icons/Javascript";
+import { KeycloakIcon } from "@/icons/keycloak";
 import { NextJsIcon } from "@/icons/NextJs";
 import { NodeJsIcon } from "@/icons/NodeJs";
 import { PwaIcon } from "@/icons/Pwa";
@@ -9,10 +10,10 @@ import { ReactIcon } from "@/icons/React";
 import { TypescriptIcon } from "@/icons/Typescript";
 import { VueIcon } from "@/icons/Vue";
 import {
-  Certificate,
-  Code,
-  Database,
-  GraduationCap,
+  CertificateIcon,
+  CodeIcon,
+  DatabaseIcon,
+  GraduationCapIcon,
 } from "@phosphor-icons/react";
 import { useEffect } from "react";
 
@@ -27,6 +28,7 @@ export function AboutMe() {
     { name: "Python", icon: <PythonIcon />, category: "language" },
     { name: "Docker", icon: <DockerIcon />, category: "backend" },
     { name: "PWA", icon: <PwaIcon />, category: "frontend" },
+    { name: "Keycloak", icon: <KeycloakIcon />, category: "backend" },
   ];
 
   useEffect(() => {
@@ -46,7 +48,7 @@ export function AboutMe() {
               />
             </div>
             <div className="absolute -bottom-4 -right-4 rounded-full bg-vermelhoPrincipal p-3 shadow-lg">
-              <Code weight="bold" size={24} className="text-white" />
+              <CodeIcon weight="bold" size={24} className="text-white" />
             </div>
           </div>
 
@@ -73,13 +75,16 @@ export function AboutMe() {
           {/* Left Column */}
           <div className="transform rounded-2xl bg-gray-800/50 p-8 shadow-xl backdrop-blur-sm transition-transform hover:scale-[1.01]">
             <h2 className="mb-6 flex items-center gap-3 text-3xl font-semibold text-vermelhoPrincipal">
-              <GraduationCap size={32} weight="duotone" />
+              <GraduationCapIcon size={32} weight="duotone" />
               Formação & Conhecimentos
             </h2>
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <div className="mt-1 rounded-lg bg-vermelhoPrincipal/20 p-2">
-                  <GraduationCap size={24} className="text-vermelhoPrincipal" />
+                  <GraduationCapIcon
+                    size={24}
+                    className="text-vermelhoPrincipal"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-white">
@@ -92,7 +97,10 @@ export function AboutMe() {
               </li>
               <li className="flex gap-4">
                 <div className="mt-1 rounded-lg bg-vermelhoPrincipal/20 p-2">
-                  <Certificate size={24} className="text-vermelhoPrincipal" />
+                  <CertificateIcon
+                    size={24}
+                    className="text-vermelhoPrincipal"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-white">
@@ -109,13 +117,13 @@ export function AboutMe() {
           {/* Right Column */}
           <div className="transform rounded-2xl bg-gray-800/50 p-8 shadow-xl backdrop-blur-sm transition-transform hover:scale-[1.01]">
             <h2 className="mb-6 flex items-center gap-3 text-3xl font-semibold text-vermelhoPrincipal">
-              <Code size={32} weight="duotone" />
+              <CodeIcon size={32} weight="duotone" />
               Experiência Profissional
             </h2>
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <div className="mt-1 rounded-lg bg-vermelhoPrincipal/20 p-2">
-                  <Code size={24} className="text-vermelhoPrincipal" />
+                  <CodeIcon size={24} className="text-vermelhoPrincipal" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-white">
@@ -131,7 +139,7 @@ export function AboutMe() {
               </li>
               <li className="flex gap-4">
                 <div className="mt-1 rounded-lg bg-vermelhoPrincipal/20 p-2">
-                  <Database size={24} className="text-vermelhoPrincipal" />
+                  <DatabaseIcon size={24} className="text-vermelhoPrincipal" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-white">
