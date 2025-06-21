@@ -1,8 +1,9 @@
 import foto from "@/assets/perfil.jpg";
+import { DockerIcon } from "@/icons/docker";
 import { JavascriptIcon } from "@/icons/Javascript";
-import { MysqlIcon } from "@/icons/Mysql";
 import { NextJsIcon } from "@/icons/NextJs";
 import { NodeJsIcon } from "@/icons/NodeJs";
+import { PwaIcon } from "@/icons/Pwa";
 import { PythonIcon } from "@/icons/Python";
 import { ReactIcon } from "@/icons/React";
 import { TypescriptIcon } from "@/icons/Typescript";
@@ -24,7 +25,8 @@ export function AboutMe() {
     { name: "Typescript", icon: <TypescriptIcon />, category: "language" },
     { name: "NodeJs", icon: <NodeJsIcon />, category: "backend" },
     { name: "Python", icon: <PythonIcon />, category: "language" },
-    { name: "MySQL", icon: <MysqlIcon />, category: "database" },
+    { name: "Docker", icon: <DockerIcon />, category: "backend" },
+    { name: "PWA", icon: <PwaIcon />, category: "frontend" },
   ];
 
   useEffect(() => {
