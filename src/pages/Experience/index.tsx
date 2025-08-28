@@ -176,7 +176,7 @@ export function Experience() {
                     <h3 className="mb-2 font-medium text-vermelhoPrincipal">
                       Integração de sistemas para Nutricare (2025)
                     </h3>
-                    <p className="text-justify">
+                    <p className="mb-5 text-justify">
                       Nesse projeto foi solicitado a criação de um sistema no
                       qual consumisse os dados do sistema que eles utilizavam
                       para gerenciamento de mercadorias e enviasse para uma
@@ -193,6 +193,32 @@ export function Experience() {
                       fazer uma auditoria, caso se torna-se preciso. Para testes
                       unitarios no backend utilizei o vitest, que é uma
                       ferramenta que já utilizei em projetos pessoais
+                    </p>
+
+                    <h3 className="mb-2 font-medium text-vermelhoPrincipal">
+                      Sistema de Cotação de Veiculos (2025)
+                    </h3>
+
+                    <p className="mb-5 text-justify">
+                      Nesse Projeto desenvolvi um Sistema completo do zero para
+                      cotações de Veiculos para a Brandão Automoveis LTDA, nesse
+                      projeto utilizei no frontend ReactJs + Typescript, no
+                      backend utilizei NodeJs + Typescript + Fastify +
+                      PrismaORM, no Banco de Dados optei por utilizar o Postgres
+                      e para autenticação de usuarios utilizei o Firebase. O
+                      sistema desenvolvido contempla funcionalidades de
+                      cadastro, consulta de veiculos, cadastro de cotações,
+                      geração automatica de PDFs com propostas de acordo com os
+                      dados da cotação. Além disso foi solicitado fazer uma
+                      integração com a API do ConLicitação, para puxar as
+                      licitações e evitar o cadastro manual de cada uma. Nesse
+                      Projeto como grande desafio foi ter que configurar um
+                      servidor do zero utilizando os droplets do Digital Ocean,
+                      foi utilizado pois era preciso que a API tivesse um IP
+                      fixo, então precisei aprender sobre configurações do
+                      nginx, além disso foi necessário implementar um sistema de
+                      logs para monitorar as requisições e identificar possíveis
+                      problemas.
                     </p>
                   </div>
                 </div>
